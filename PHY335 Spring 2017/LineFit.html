@@ -1,0 +1,45 @@
+<HTML>
+<HEAD/>
+<BODY>
+<H3>Fit data to a straight line</H3>
+To use this fitting code, the data must be in a text file.  Each line
+of the file should contain the x, y and sigma(y) values for one measurement.
+<BR><BR>
+<CENTER>Click on Choose File to perform a fit</CENTER>
+<APPLET code="LineFit.LineFitApplet.class" archive="LineFit.jar" width="100%" height="600"></APPLET>
+
+<HR><H3>Running at a command line</H3>
+
+<P>This applet is written in Java.  A pre-compiled version for running at the
+command prompt and the source code are available.  To run the pre-compiled
+version on your own computer (without needing net access) you first need to
+have either the <a href="http://java.sun.com/javase/downloads/index.jsp"> Java
+run time (jre)</a> or <a
+href="http://java.sun.com/javase/downloads/index.jsp">development kit</a>
+installed on your computer.  <B>If you have a browser, you probably already
+have the run time installed.  Look for the program called "java".</B> Then you
+need to download the <a href="LineFit.jar">jar file</a> (using "Save link
+as..." in your browser).  Once you have this, then in the folder where you
+saved the jar file, do
+
+<pre>
+    java -jar LineFit.jar Put_the_name_of_your_text_file_with_data_here
+</pre>
+
+<H3>Getting and modifying the source code</H3>
+To modify the source code and allow it to be recompiled you first need to
+download the <a href="LineFit.jar">source</a> by doing "Save link as" in your
+browser, and then unpack it using
+<pre>
+    jar xf LineFit.jar
+</pre>
+
+Then you can edit the source code, compile and package it to run as above by
+doing
+<pre>
+    javac -d . -classpath . LineFit*.java
+    jar cvfe LineFit.jar LineFit.LineFitMain LineFit/*.class
+</pre>
+
+</BODY>
+</HTML>

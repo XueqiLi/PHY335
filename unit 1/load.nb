@@ -1,0 +1,2201 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    101693,       2191]
+NotebookOptionsPosition[     96902,       2105]
+NotebookOutlinePosition[     97259,       2121]
+CellTagsIndexPosition[     97216,       2118]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rtot", "[", "x_", "]"}], ":=", 
+  RowBox[{"r1", " ", "+", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1", "/", "r2"}], " ", "+", " ", 
+      RowBox[{"1", "/", "x"}]}], ")"}], "^", 
+    RowBox[{"-", "1"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7273911185549192`*^9, 3.727391139470985*^9}, {
+  3.7273912433933372`*^9, 
+  3.727391245826591*^9}},ExpressionUUID->"1dabdd49-a373-4d0c-bb3a-\
+0fe2059e73d3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"iload", "[", "x_", "]"}], ":=", 
+  RowBox[{"vin", "/", 
+   RowBox[{"rtot", "[", "x", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.727391149018852*^9, 
+  3.727391179674621*^9}},ExpressionUUID->"f03e4eff-b2d3-44d8-8750-\
+362600568518"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rloadset", "[", "x_", "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"1", "/", "r2"}], "+", " ", 
+     RowBox[{"1", "/", "x"}]}], ")"}], "^", 
+   RowBox[{"-", "1"}]}]}]], "Input",
+ CellChangeTimes->{{3.7273912197930317`*^9, 
+  3.7273912498552437`*^9}},ExpressionUUID->"4529f224-191e-4816-89df-\
+1400634d57ea"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vload", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"iload", "[", "x", "]"}], " ", 
+   RowBox[{"rloadset", "[", "x", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.727391255627708*^9, 
+  3.7273912840821123`*^9}},ExpressionUUID->"020a937f-33fc-4edd-88b5-\
+360c604638ad"],
+
+Cell[BoxData[
+ RowBox[{"vth", ":=", 
+  RowBox[{"vin", " ", 
+   RowBox[{"r2", " ", "/", 
+    RowBox[{"(", 
+     RowBox[{"r1", "+", "r2"}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.727391295599895*^9, 
+  3.72739131683664*^9}},ExpressionUUID->"1893487a-4202-480c-b783-\
+9c95a9b9ef31"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rth", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"vth", " ", 
+    RowBox[{"x", " ", "/", 
+     RowBox[{"vload", "[", "x", "]"}]}]}], " ", "-", "x"}]}]], "Input",
+ CellChangeTimes->{{3.727391326921014*^9, 3.72739134894116*^9}, {
+  3.7273916511227407`*^9, 3.7273916515652857`*^9}, {3.7273926854038973`*^9, 
+  3.7273926883780003`*^9}},ExpressionUUID->"3750401b-3ab4-43c4-b0a5-\
+006dd7ce0bbd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["rth"], "Input",
+ CellChangeTimes->{{3.7273913523187437`*^9, 
+  3.727391352663314*^9}},ExpressionUUID->"bb1b8d96-2bf8-4f11-bb2a-\
+fc9158853086"],
+
+Cell[BoxData["rth"], "Output",
+ CellChangeTimes->{
+  3.727391352950756*^9},ExpressionUUID->"40bca475-7344-4cf8-89a8-\
+549f04263d21"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rth", "[", "x", "]"}]], "Input",
+ CellChangeTimes->{{3.727391354111902*^9, 
+  3.7273913553559217`*^9}},ExpressionUUID->"ba7fe623-8bd4-405d-8f7b-\
+0df602afa47b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "x"}], "+", 
+  FractionBox[
+   RowBox[{"r2", " ", 
+    RowBox[{"(", 
+     RowBox[{"r1", "+", 
+      FractionBox["1", 
+       RowBox[{
+        FractionBox["1", "r2"], "+", 
+        FractionBox["1", "x"]}]]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["1", "r2"], "+", 
+      FractionBox["1", "x"]}], ")"}], " ", "x"}], 
+   RowBox[{"r1", "+", "r2"}]]}]], "Output",
+ CellChangeTimes->{
+  3.727391355785761*^9},ExpressionUUID->"7e48150e-8238-4997-bd14-\
+57275d3ca2d9"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"r1", ":=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1", "/", "1200"}], "+", 
+      RowBox[{"1", "/", "14600"}]}], ")"}], "^", 
+    RowBox[{"-", "1"}]}], " ", "+", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1", "/", "240"}], " ", "+", " ", 
+      RowBox[{"1", "/", "53500"}]}], ")"}], "^", 
+    RowBox[{"-", "1", " "}]}]}]}]], "Input",
+ CellChangeTimes->{{3.72739137717756*^9, 3.727391412758746*^9}, {
+   3.727392675978017*^9, 3.727392678455941*^9}, 
+   3.727392849730207*^9},ExpressionUUID->"da187aa1-71f5-4ffa-82ac-\
+ec1f7ac3c603"],
+
+Cell[BoxData[
+ RowBox[{"r2", ":=", " ", "10100"}]], "Input",
+ CellChangeTimes->{{3.727391413996686*^9, 
+  3.7273914195327473`*^9}},ExpressionUUID->"d683ffc6-9bc2-4843-a7f4-\
+538c9e540ebb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"rth", "[", "1000", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.727391422400856*^9, 3.727391436665523*^9}, {
+  3.727391660301898*^9, 
+  3.7273916604631157`*^9}},ExpressionUUID->"bd687b2e-36fd-4a27-9e51-\
+fc3512fb3044"],
+
+Cell[BoxData["824.3185925001596`"], "Output",
+ CellChangeTimes->{{3.727391425683729*^9, 3.727391436939587*^9}, {
+   3.7273916565694027`*^9, 3.7273916614656878`*^9}, 
+   3.727392697788661*^9},ExpressionUUID->"b07f9e47-bd4e-4d43-acda-\
+1c4437cd9296"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rth", "[", "10", "]"}]], "Input",
+ CellChangeTimes->{{3.7273914582972918`*^9, 3.7273914594774637`*^9}, {
+  3.7273926928145733`*^9, 
+  3.7273926930073833`*^9}},ExpressionUUID->"0494da6d-2d18-4292-b528-\
+228f0ace5fed"],
+
+Cell[BoxData[
+ FractionBox["32397487200", "39302143"]], "Output",
+ CellChangeTimes->{3.727391459962109*^9, 3.727391654114966*^9, 
+  3.727392694259939*^9},ExpressionUUID->"31466ad4-39dd-4fbf-a4f8-\
+7ca776abd921"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+-x + (36094471*(320767200/357371 + (1/10100 + x^(-1))^(-1))*(1/10100 + \
+x^(-1))*x)/39302143\
+\>", "WolframAlphaLong",ExpressionUUID->"aa0d9fc1-6db3-4c07-9b72-\
+ade2a9133802"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = 
+   "-x + (36094471*(320767200/357371 + (1/10100 + x^(-1))^(-1))*(1/10100 + \
+x^(-1))*x)/39302143", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, Asynchronous -> All, 
+    TimeConstraint -> {20, Automatic, Automatic, Automatic}, 
+    Method -> {
+     "Formats" -> {"cell", "minput", "msound", "dataformats"}, "Server" -> 
+      "http://api.wolframalpha.com/v1/"}}, Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Input", "scanner" -> "Identity", "id" -> "Input", 
+     "position" -> "100", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) (1/10100 \
++ x^(-1)) x)/39302143"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             RowBox[{
+               RowBox[{"-", "x"}], "+", 
+               FractionBox[
+                TagBox[
+                 RowBox[{"36094471", " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["320767200", "357371"], "+", 
+                    FractionBox["1", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}]]}], ")"}], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}], ")"}], " ", "x"}], 
+                 PolynomialForm[#, TraditionalOrder -> False]& ], 
+                "39302143"]}], 
+             PolynomialForm[#, TraditionalOrder -> False]& ], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata,formuladata"}]}]}], 
+   Typeset`pod2$$ = XMLElement[
+   "pod", {"title" -> "Plot", "scanner" -> "Plotter", "id" -> "Plot", 
+     "position" -> "200", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "Plot[-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) \
+(1/10100 + x^(-1)) x)/39302143, {x, -1, 1}]"}], 
+       XMLElement["cell", {"compressed" -> True, "string" -> False}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             FormBox[
+              StyleBox[
+               
+               DynamicModuleBox[{
+                CalculateUtilities`GraphicsUtilities`Private`max6684$$ = 0.5, 
+                 CalculateUtilities`GraphicsUtilities`Private`min6683$$ = \
+-0.5, CalculateUtilities`GraphicsUtilities`Private`more$$ = False, 
+                 Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+                 Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, 
+                 Typeset`animvar$$ = 1, Typeset`name$$ = "\"untitled\"", 
+                 Typeset`specs$$ = {{
+                    Hold[
+                    CalculateUtilities`GraphicsUtilities`Private`more$$], {
+                    False, True}}, {{
+                    Hold[
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$], \
+-0.5, "min"}, -1, 1}, {{
+                    Hold[
+                    CalculateUtilities`GraphicsUtilities`Private`max6684$$], 
+                    0.5, "max"}, -1, 1}, {
+                    Hold[
+                    Style[
+                    Overlay[{
+                    Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "WABitmaps", "PodInfoBackground"]]], 
+                    Pane[
+                    Column[{
+                    Grid[{{
+                    Manipulate`Place[1], 
+                    Manipulate`Place[2]}}]}], 
+                    ImageMargins -> {{20, 30}, {10, 10}}]}, {1, 2}, 2, 
+                    Alignment -> {Left, Top}]]], 
+                    Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = 
+                 Automatic, Typeset`update$$ = 0, Typeset`initDone$$ = False, 
+                 Typeset`skipInitDone$$ = False, 
+                 CalculateUtilities`GraphicsUtilities`Private`more$2229860$$ = 
+                 False, CalculateUtilities`GraphicsUtilities`Private`min6683$\
+2229865$$ = 0, CalculateUtilities`GraphicsUtilities`Private`max6684$2229866$$ = 
+                 0}, 
+                DynamicBox[
+                 Manipulate`ManipulateBoxes[
+                 2, TraditionalForm, 
+                  "Variables" :> {
+                   CalculateUtilities`GraphicsUtilities`Private`max6684$$ = 
+                    0.5, CalculateUtilities`GraphicsUtilities`Private`min6683$\
+$ = -0.5, CalculateUtilities`GraphicsUtilities`Private`more$$ = False}, 
+                  "ControllerVariables" :> {
+                    Hold[
+                    CalculateUtilities`GraphicsUtilities`Private`more$$, 
+                    CalculateUtilities`GraphicsUtilities`Private`more$2229860$\
+$, False], 
+                    Hold[
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$, 
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$\
+2229865$$, 0], 
+                    Hold[
+                    CalculateUtilities`GraphicsUtilities`Private`max6684$$, 
+                    CalculateUtilities`GraphicsUtilities`Private`max6684$\
+2229866$$, 0]}, "OtherVariables" :> {
+                   Typeset`show$$, Typeset`bookmarkList$$, 
+                    Typeset`bookmarkMode$$, Typeset`animator$$, 
+                    Typeset`animvar$$, Typeset`name$$, Typeset`specs$$, 
+                    Typeset`size$$, Typeset`update$$, Typeset`initDone$$, 
+                    Typeset`skipInitDone$$}, "Body" :> Quiet[
+                    Function[Null, 
+                    CalculateUtilities`GraphicsUtilities`Private`post$2229838[
+                    
+                    Plot[
+                    SlotSequence[1], AspectRatio -> If[
+                    TrueQ[
+                    CalculateUtilities`GraphicsUtilities`Private`aspect], 
+                    Automatic, 1/GoldenRatio]]], HoldAll][-$CellContext`x + 
+                    Rational[36094471, 39302143] (
+                    Rational[
+                    320767200, 357371] + (
+                    Rational[1, 10100] + $CellContext`x^(-1))^(-1)) (
+                    Rational[
+                    1, 10100] + $CellContext`x^(-1)) $CellContext`x, \
+{$CellContext`x, 
+                    If[
+                    NumericQ[
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$], 
+                    (
+                    Piecewise[{{
+                    0. + 1.0690449676496974` Tan[1.5040801783846716` #], # < 
+                    0}}, 0. + 
+                    1.0690449676496974` Tan[1.5040801783846716` #]]& )[
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$], \
+-1], 
+                    If[
+                    And[
+                    NumericQ[
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$], 
+                    NumericQ[
+                    CalculateUtilities`GraphicsUtilities`Private`max6684$$]], \
+
+                    (Piecewise[{{
+                    0. + 1.0690449676496974` Tan[1.5040801783846716` #], # < 
+                    0}}, 0. + 
+                    1.0690449676496974` Tan[1.5040801783846716` #]]& )[
+                    If[
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$ == 
+                    CalculateUtilities`GraphicsUtilities`Private`max6684$$, 
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$ + 
+                    Rational[1, 500], 
+                    CalculateUtilities`GraphicsUtilities`Private`max6684$$]], 
+                    1]}, LabelStyle -> {FontFamily -> "Bitstream Charter"}, 
+                    WorkingPrecision -> MachinePrecision, 
+                    PlotRange -> {
+                    Full, {-206.07964812503989922381586164398211059378`20., 
+                    1030.39824062519949611907930821991055296888`20.}}, 
+                    PlotRange -> {Automatic, Automatic}, LabelStyle -> {}, 
+                    Ticks -> Automatic, ImageSize -> Scaled[0.4], AxesLabel -> {
+                    RawBoxes[
+                    FormBox["x", TraditionalForm]], 
+                    RawBoxes[
+                    FormBox["y", TraditionalForm]]}, WorkingPrecision -> 30, 
+                    AxesLabel -> {
+                    RawBoxes[
+                    FormBox["x", TraditionalForm]], None}]], 
+                  "Specifications" :> {{
+                    CalculateUtilities`GraphicsUtilities`Private`more$$, {
+                    False, True}, ControlType -> None}, {{
+                    CalculateUtilities`GraphicsUtilities`Private`min6683$$, \
+-0.5, "min"}, -1, 1, ImageSize -> Tiny, ControlPlacement -> 1}, {{
+                    CalculateUtilities`GraphicsUtilities`Private`max6684$$, 
+                    0.5, "max"}, -1, 1, ImageSize -> Tiny, ControlPlacement -> 
+                    2}, 
+                    Style[
+                    Overlay[{
+                    Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "WABitmaps", "PodInfoBackground"]]], 
+                    Pane[
+                    Column[{
+                    Grid[{{
+                    Manipulate`Place[1], 
+                    Manipulate`Place[2]}}]}], 
+                    ImageMargins -> {{20, 30}, {10, 10}}]}, {1, 2}, 2, 
+                    Alignment -> {Left, Top}]]}, 
+                  "Options" :> {
+                   ControlPlacement -> Bottom, 
+                    FrameMargins -> {{0, 0}, {0, 10}}, Paneled -> False, 
+                    AppearanceElements -> {}, 
+                    LabelStyle -> {
+                    "DialogStyle", FontColor -> GrayLevel[0.25]}}, 
+                  "DefaultOptions" :> {}], SingleEvaluation -> True], 
+                Initialization :> ({
+                   ReleaseHold[
+                    Hold[
+                    CalculateUtilities`GraphicsUtilities`Private`WACleanTicks[
+                    
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, 
+                    Blank[]]] := 
+                    Module[{
+                    CalculateUtilities`GraphicsUtilities`Private`res, 
+                    CalculateUtilities`GraphicsUtilities`Private`unitformat}, 
+                    CalculateUtilities`GraphicsUtilities`Private`res = 
+                    ReplaceAll[
+                    ReplaceAll[
+                    Part[
+                    DeleteCases[
+                    Replace[
+                    ReplaceAll[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, 
+                    Alternatives[Style, $CellContext`UnitNumberForm, 
+                    NumberForm] -> (#& )], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`t, {
+                    PatternTest[
+                    BlankSequence[], NumberQ]}] :> 
+                    Thread[{CalculateUtilities`GraphicsUtilities`Private`t, 
+                    CalculateUtilities`GraphicsUtilities`Private`t}]], {
+                    Blank[], "", 
+                    BlankNullSequence[]}], All, 
+                    Span[1, 2]], Superscript[
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`b, 
+                    Blank[Integer]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`p, 
+                    Blank[Integer]]] :> 
+                    CalculateUtilities`GraphicsUtilities`Private`b^
+                    CalculateUtilities`GraphicsUtilities`Private`p], Row[{
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`a, 
+                    BlankSequence[]]}, "\[Times]"] :> 
+                    Times[CalculateUtilities`GraphicsUtilities`Private`a]]; If[
+                    MatchQ[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`res, All, 2], 
+                    Condition[
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`quants, {
+                    Alternatives[
+                    BlankSequence[$CellContext`ShortQuantity], 
+                    BlankSequence[Quantity]]}], Length[
+                    Union[
+                    
+                    Map[$CellContext`UnitObjectPart, 
+                    CalculateUtilities`GraphicsUtilities`Private`quants]]] == 
+                    1]], CalculateUtilities`GraphicsUtilities`Private`\
+unitformat = $CellContext`ToCDFQuantityFunction[
+                    Part[CalculateUtilities`GraphicsUtilities`Private`res, 1, 
+                    2]]; CalculateUtilities`GraphicsUtilities`Private`\
+unitformat -> Thread[{
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`res, All, 1], 
+                    $CellContext`QuantityPart[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`res, All, 2], 
+                    $CellContext`UnitObjectPart[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`res, 1, 
+                    2]]]}], 
+                    CalculateUtilities`GraphicsUtilities`Private`res]]; 
+                    Options[
+                    CalculateUtilities`GraphicsUtilities`Private`post$2229838]\
+ = {"ReturnInteractiveTypes" -> False, "Nearest" -> Automatic}; 
+                    CalculateUtilities`GraphicsUtilities`Private`post$2229838[
+                    
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`g, 
+                    Blank[Graphics]], 
+                    OptionsPattern[]] := Check[
+                    
+                    Module[{
+                    CalculateUtilities`GraphicsUtilities`Private`lines, 
+                    CalculateUtilities`GraphicsUtilities`Private`pts, 
+                    CalculateUtilities`GraphicsUtilities`Private`gg, 
+                    CalculateUtilities`GraphicsUtilities`Private`type, 
+                    CalculateUtilities`GraphicsUtilities`Private`b, 
+                    CalculateUtilities`GraphicsUtilities`Private`l, 
+                    CalculateUtilities`GraphicsUtilities`Private`t, 
+                    CalculateUtilities`GraphicsUtilities`Private`r, 
+                    CalculateUtilities`GraphicsUtilities`Private`oldepilog, 
+                    CalculateUtilities`GraphicsUtilities`Private`range, 
+                    CalculateUtilities`GraphicsUtilities`Private`gridlines, 
+                    CalculateUtilities`GraphicsUtilities`Private`oldgridlines,
+                     CalculateUtilities`GraphicsUtilities`Private`\
+neareststyle = OptionValue["Nearest"]}, 
+                    CalculateUtilities`GraphicsUtilities`Private`oldepilog = 
+                    Replace[
+                    ReplaceAll[Epilog, 
+                    Options[CalculateUtilities`GraphicsUtilities`Private`g]], 
+                    Epilog -> Sequence[]]; Switch[
+                    ReplaceAll[{Frame, Axes}, 
+                    Options[
+                    CalculateUtilities`GraphicsUtilities`Private`g]], {True, 
+                    Blank[]}, 
+                    CalculateUtilities`GraphicsUtilities`Private`type = 
+                    Frame; {CalculateUtilities`GraphicsUtilities`Private`b, 
+                    CalculateUtilities`GraphicsUtilities`Private`l, 
+                    CalculateUtilities`GraphicsUtilities`Private`t, 
+                    CalculateUtilities`GraphicsUtilities`Private`r} = 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Frame, 
+                    ReplaceAll[FrameTicks, 
+                    Options[
+                    CalculateUtilities`GraphicsUtilities`Private`g]]], {
+                    Blank[], True}, 
+                    CalculateUtilities`GraphicsUtilities`Private`type = 
+                    Axes; {CalculateUtilities`GraphicsUtilities`Private`b, 
+                    CalculateUtilities`GraphicsUtilities`Private`l} = 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Axes, 
+                    ReplaceAll[Ticks, 
+                    Options[CalculateUtilities`GraphicsUtilities`Private`g]]], 
+                    Blank[], 
+                    CalculateUtilities`GraphicsUtilities`Private`type = None]; 
+                    If[
+                    And[
+                    CalculateUtilities`GraphicsUtilities`Private`type === 
+                    Frame, 
+                    Or[
+                    Not[
+                    Or[
+                    CalculateUtilities`GraphicsUtilities`Private`t === None, 
+                    CalculateUtilities`GraphicsUtilities`Private`b === 
+                    CalculateUtilities`GraphicsUtilities`Private`t]], 
+                    Not[
+                    Or[
+                    CalculateUtilities`GraphicsUtilities`Private`r === None, 
+                    CalculateUtilities`GraphicsUtilities`Private`l === 
+                    CalculateUtilities`GraphicsUtilities`Private`r]]]], 
+                    CalculateUtilities`GraphicsUtilities`Private`type = None]; 
+                    If[
+                    TrueQ[
+                    OptionValue["ReturnInteractiveTypes"]], 
+                    Which[
+                    Or[
+                    CalculateUtilities`GraphicsUtilities`Private`type === 
+                    None, CalculateUtilities`GraphicsUtilities`Private`b === 
+                    None, CalculateUtilities`GraphicsUtilities`Private`l === 
+                    None], {}, 
+                    FreeQ[CalculateUtilities`GraphicsUtilities`Private`g, 
+                    Alternatives[Line, Point]], {}, True, {
+                    "Tooltips", "Coordinates"}], If[
+                    FreeQ[CalculateUtilities`GraphicsUtilities`Private`g, 
+                    Alternatives[Line, Point]], 
+                    Return[CalculateUtilities`GraphicsUtilities`Private`g]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`gg = 
+                    Normal[CalculateUtilities`GraphicsUtilities`Private`g]; 
+                    CalculateUtilities`GraphicsUtilities`Private`pts = 
+                    Partition[
+                    Flatten[
+                    Cases[
+                    Part[CalculateUtilities`GraphicsUtilities`Private`gg, 1], 
+                    Point[
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`a, 
+                    Blank[]]] :> 
+                    CalculateUtilities`GraphicsUtilities`Private`a, 
+                    Infinity]], 2]; 
+                    If[Length[
+                    CalculateUtilities`GraphicsUtilities`Private`pts] < 2, 
+                    CalculateUtilities`GraphicsUtilities`Private`lines = Cases[
+                    Part[CalculateUtilities`GraphicsUtilities`Private`gg, 1], 
+                    
+                    Blank[Line], Infinity]; 
+                    If[CalculateUtilities`GraphicsUtilities`Private`lines === \
+{}, 
+                    Return[CalculateUtilities`GraphicsUtilities`Private`g]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`pts = Flatten[
+                    Cases[
+                    CalculateUtilities`GraphicsUtilities`Private`lines, Line[
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`a, 
+                    Blank[]]] :> 
+                    CalculateUtilities`GraphicsUtilities`Private`a, Infinity],
+                     1]; If[
+                    CalculateUtilities`GraphicsUtilities`Private`neareststyle === 
+                    Automatic, If[
+                    CalculateUtilities`GraphicsUtilities`Private`orderedLines[
+                    CalculateUtilities`GraphicsUtilities`Private`lines], 
+                    CalculateUtilities`GraphicsUtilities`Private`neareststyle = 
+                    "1D", CalculateUtilities`GraphicsUtilities`Private`\
+neareststyle = "2D"]; Null], 
+                    If[
+                    CalculateUtilities`GraphicsUtilities`Private`neareststyle === 
+                    Automatic, 
+                    CalculateUtilities`GraphicsUtilities`Private`neareststyle = 
+                    "2D"]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`range = 
+                    Replace[
+                    ReplaceAll[PlotRange, 
+                    Options[CalculateUtilities`GraphicsUtilities`Private`g]], 
+                    Except[{{
+                    PatternTest[
+                    Blank[], NumberQ], 
+                    PatternTest[
+                    Blank[], NumberQ]}, {
+                    PatternTest[
+                    Blank[], NumberQ], 
+                    PatternTest[
+                    Blank[], NumberQ]}}] :> {
+                    Through[
+                    {Min, Max}[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pts, All, 
+                    1]]], 
+                    Through[
+                    {Min, Max}[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pts, All, 
+                    2]]]}]; CalculateUtilities`GraphicsUtilities`Private`b = 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+RefineCoordinateFunction[CalculateUtilities`GraphicsUtilities`Private`b, 
+                    First[CalculateUtilities`GraphicsUtilities`Private`range], 
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pts, All, 
+                    1]]; CalculateUtilities`GraphicsUtilities`Private`l = 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+RefineCoordinateFunction[CalculateUtilities`GraphicsUtilities`Private`l, 
+                    Last[CalculateUtilities`GraphicsUtilities`Private`range], 
+                    
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pts, All, 
+                    2]]; CalculateUtilities`GraphicsUtilities`Private`\
+oldgridlines = ReplaceAll[GridLines, 
+                    Options[CalculateUtilities`GraphicsUtilities`Private`g]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`gridlines = 
+                    With[{CalculateUtilities`GraphicsUtilities`Private`gray = 
+                    GrayLevel[0.7]}, 
+                    Replace[
+                    CalculateUtilities`GraphicsUtilities`Private`oldgridlines,\
+ {Pattern[CalculateUtilities`GraphicsUtilities`Private`a, {
+                    Blank[List], 
+                    Blank[List]}] :> Dynamic[
+                    Join[CalculateUtilities`GraphicsUtilities`Private`a, 
+                    Replace[
+                    MousePosition[{"Graphics", Graphics}, None], {
+                    None -> {{}, {}}, {
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`x, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`y, 
+                    Blank[]]} :> {{{
+                    CalculateUtilities`GraphicsUtilities`Private`x, 
+                    CalculateUtilities`GraphicsUtilities`Private`gray}}, {{
+                    CalculateUtilities`GraphicsUtilities`Private`y, 
+                    CalculateUtilities`GraphicsUtilities`Private`gray}}}}], 
+                    2]], {
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`a, 
+                    Blank[List]], Automatic} :> 
+                    With[{CalculateUtilities`GraphicsUtilities`Private`\
+divisions = {CalculateUtilities`GraphicsUtilities`Private`a, 
+                    FindDivisions[
+                    Last[CalculateUtilities`GraphicsUtilities`Private`range], 
+                    7]}}, 
+                    Dynamic[
+                    Join[
+                    CalculateUtilities`GraphicsUtilities`Private`divisions, 
+                    Replace[
+                    MousePosition[{"Graphics", Graphics}, None], {
+                    None -> {{}, {}}, {
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`x, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`y, 
+                    Blank[]]} :> {{{
+                    CalculateUtilities`GraphicsUtilities`Private`x, 
+                    CalculateUtilities`GraphicsUtilities`Private`gray}}, {{
+                    CalculateUtilities`GraphicsUtilities`Private`y, 
+                    CalculateUtilities`GraphicsUtilities`Private`gray}}}}], 
+                    2]]], Blank[] -> Dynamic[
+                    
+                    Map[{{#, 
+                    CalculateUtilities`GraphicsUtilities`Private`gray}}& , 
+                    MousePosition[{"Graphics", Graphics}, None]]]}]]; If[
+                    Or[
+                    CalculateUtilities`GraphicsUtilities`Private`type === 
+                    None, CalculateUtilities`GraphicsUtilities`Private`b === 
+                    None, CalculateUtilities`GraphicsUtilities`Private`l === 
+                    None], 
+                    Show[
+                    CalculateUtilities`GraphicsUtilities`Private`g, GridLines -> 
+                    CalculateUtilities`GraphicsUtilities`Private`gridlines, 
+                    If[
+                    MatchQ[
+                    CalculateUtilities`GraphicsUtilities`Private`oldgridlines, 
+                    Alternatives[None, GridLines]], 
+                    Method -> {"GridLinesInFront" -> True}, 
+                    Apply[Sequence, {}]]], 
+                    
+                    With[{CalculateUtilities`GraphicsUtilities`Private`nf = 
+                    If[CalculateUtilities`GraphicsUtilities`Private`\
+neareststyle === "1D", 
+                    
+                    With[{CalculateUtilities`GraphicsUtilities`Private`n = 
+                    Nearest[Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pts, All, 1] -> 
+                    CalculateUtilities`GraphicsUtilities`Private`pts]}, 
+                    CalculateUtilities`GraphicsUtilities`Private`n[
+                    Part[#, 1]]& ], 
+                    
+                    With[{CalculateUtilities`GraphicsUtilities`Private`n = 
+                    Nearest[Transpose[Transpose[
+                    CalculateUtilities`GraphicsUtilities`Private`pts]/Abs[
+                    Apply[
+                    Subtract, 
+                    CalculateUtilities`GraphicsUtilities`Private`range, {
+                    1}]]] -> 
+                    CalculateUtilities`GraphicsUtilities`Private`pts], 
+                    CalculateUtilities`GraphicsUtilities`Private`scale = Abs[
+                    Apply[
+                    Subtract, 
+                    CalculateUtilities`GraphicsUtilities`Private`range, {
+                    1}]]}, CalculateUtilities`GraphicsUtilities`Private`n[#/
+                    CalculateUtilities`GraphicsUtilities`Private`scale]& ]], 
+                    CalculateUtilities`GraphicsUtilities`Private`left = 
+                    CalculateUtilities`GraphicsUtilities`Private`l, 
+                    CalculateUtilities`GraphicsUtilities`Private`bottom = 
+                    CalculateUtilities`GraphicsUtilities`Private`b}, 
+                    Show[
+                    CalculateUtilities`GraphicsUtilities`Private`g, GridLines -> 
+                    CalculateUtilities`GraphicsUtilities`Private`gridlines, 
+                    If[
+                    MatchQ[
+                    CalculateUtilities`GraphicsUtilities`Private`oldgridlines, 
+                    Alternatives[None, GridLines]], 
+                    Method -> {"GridLinesInFront" -> True}, 
+                    Apply[Sequence, {}]], 
+                    Epilog -> {
+                    CalculateUtilities`GraphicsUtilities`Private`oldepilog, 
+                    Dynamic[
+                    
+                    DynamicModule[{
+                    CalculateUtilities`GraphicsUtilities`Private`pt = 
+                    CalculateUtilities`GraphicsUtilities`Private`nf[
+                    MousePosition[{"Graphics", Graphics}, {0, 0}]], 
+                    CalculateUtilities`GraphicsUtilities`Private`scaled = 
+                    MousePosition[{"GraphicsScaled", Graphics}, None]}, 
+                    If[
+                    CalculateUtilities`GraphicsUtilities`Private`scaled === 
+                    None, {}, {
+                    Text[
+                    Style[
+                    Row[{
+                    CalculateUtilities`GraphicsUtilities`Private`bottom[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pt, 1, 1]], 
+                    CalculateUtilities`GraphicsUtilities`Private`left[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pt, 1, 2]]}, 
+                    ","], 12], 
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`pt, 1], {
+                    1.5 Sign[Part[
+                    CalculateUtilities`GraphicsUtilities`Private`scaled, 1] - 
+                    0.5], 0}, Background -> White], 
+                    AbsolutePointSize[7], 
+                    Point[CalculateUtilities`GraphicsUtilities`Private`pt], 
+                    White, 
+                    AbsolutePointSize[5], 
+                    Point[
+                    CalculateUtilities`GraphicsUtilities`Private`pt]}]]]}]]]]]\
+, CalculateUtilities`GraphicsUtilities`Private`g]; 
+                    CalculateUtilities`GraphicsUtilities`Private`post$2229838[
+                    
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`g, 
+                    Blank[]], 
+                    BlankNullSequence[]] := 
+                    CalculateUtilities`GraphicsUtilities`Private`g; 
+                    CalculateUtilities`GraphicsUtilities`Private`orderedLines[{
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`l, 
+                    BlankSequence[Line]]}] := 
+                    Module[{
+                    CalculateUtilities`GraphicsUtilities`Private`ordered, 
+                    CalculateUtilities`GraphicsUtilities`Private`intervals}, 
+                    CalculateUtilities`GraphicsUtilities`Private`ordered = 
+                    Apply[And, 
+                    Map[OrderedQ[
+                    Part[#, 1, All, 1]]& , 
+                    Hold[CalculateUtilities`GraphicsUtilities`Private`l]]]; If[
+                    Not[
+                    TrueQ[
+                    CalculateUtilities`GraphicsUtilities`Private`ordered]], 
+                    Return[False]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`intervals = 
+                    Part[{CalculateUtilities`GraphicsUtilities`Private`l}, 
+                    All, 1, {1, -1}, 1]; Length[
+                    Apply[
+                    Interval, 
+                    CalculateUtilities`GraphicsUtilities`Private`intervals]] === 
+                    Length[CalculateUtilities`GraphicsUtilities`Private`\
+intervals]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Frame, 
+                    Alternatives[Automatic, FrameTicks]] = {
+                    Identity, Identity, Identity, Identity}; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Frame, {
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`b, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`l, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`t, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`r, 
+                    Blank[]]}] := 
+                    Map[CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction, {CalculateUtilities`GraphicsUtilities`Private`b, 
+                    CalculateUtilities`GraphicsUtilities`Private`l, 
+                    CalculateUtilities`GraphicsUtilities`Private`t, 
+                    CalculateUtilities`GraphicsUtilities`Private`r}]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Frame, {{
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`l, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`r, 
+                    Blank[]]}, {
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`b, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`t, 
+                    Blank[]]}}] := 
+                    Map[CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction, {CalculateUtilities`GraphicsUtilities`Private`b, 
+                    CalculateUtilities`GraphicsUtilities`Private`l, 
+                    CalculateUtilities`GraphicsUtilities`Private`t, 
+                    CalculateUtilities`GraphicsUtilities`Private`r}]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Frame, 
+                    Blank[]] = {None, None, None, None}; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Axes, 
+                    Alternatives[Automatic, Ticks]] = {Identity, Identity}; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Axes, {
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`h, 
+                    Blank[]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`v, 
+                    Blank[]]}] := 
+                    Map[
+                    CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction, {CalculateUtilities`GraphicsUtilities`Private`h, 
+                    CalculateUtilities`GraphicsUtilities`Private`v}]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+ScaleCoordinatesToTicks[Axes, 
+                    Blank[]] = {None, None}; 
+                    CalculateUtilities`GraphicsUtilities`Private`CDFCleanTicks[
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, 
+                    Blank[]]] := ReplaceAll[
+                    ReplaceAll[
+                    Part[
+                    DeleteCases[
+                    ReplaceAll[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, 
+                    Alternatives[Style, NumberForm] -> (#& )], {
+                    Blank[], "", 
+                    BlankNullSequence[]}], All, 
+                    Span[1, 2]], Superscript[
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`b, 
+                    Blank[Integer]], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`p, 
+                    Blank[Integer]]] :> 
+                    CalculateUtilities`GraphicsUtilities`Private`b^
+                    CalculateUtilities`GraphicsUtilities`Private`p], Row[{
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`a, 
+                    BlankSequence[]]}, "\[Times]"] :> 
+                    Times[CalculateUtilities`GraphicsUtilities`Private`a]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction[
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks$, 
+                    Blank[]]] := 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[
+                    CalculateUtilities`GraphicsUtilities`Private`WACleanTicks[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks$]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction[None] = None; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction[False] = None; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction[True] = None; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction[Automatic] = Identity; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+TicksToFunction[All] = Identity; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[Pattern[CalculateUtilities`GraphicsUtilities`Private`func, 
+                    Blank[]] -> 
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, 
+                    Blank[]]] := Replace[
+                    
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[CalculateUtilities`GraphicsUtilities`Private`ticks], 
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`f, 
+                    Except[None]] :> 
+                    Composition[
+                    CalculateUtilities`GraphicsUtilities`Private`func, 
+                    CalculateUtilities`GraphicsUtilities`Private`f]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[{}] = None; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, {
+                    Repeated[{
+                    Blank[Integer], 
+                    Blank[String]}]}]] := Which[
+                    Quiet[
+                    MatchQ[
+                    Apply[SameQ, 
+                    Map[Part[
+                    DateList[#], 
+                    Span[2, All]]& , 
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, {
+                    2}], {1}], {
+                    Repeated[True]}]], DateString, 
+                    Apply[And, 
+                    StringMatchQ[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, All, 
+                    2], NumberString]], 
+                    
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[
+                    Transpose[{
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, All, 
+                    1], 
+                    ToExpression[
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, All, 
+                    2]]}]], True, None]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, {
+                    Repeated[{
+                    PatternTest[
+                    Blank[], NumericQ], 
+                    PatternTest[
+                    Blank[], NumericQ]}]}]] := Which[
+                    MatchQ[
+                    Apply[
+                    Equal, CalculateUtilities`GraphicsUtilities`Private`ticks,\
+ {1}], {
+                    Repeated[True]}], Identity, 
+                    MatchQ[
+                    
+                    Apply[# == Log[#2]& , 
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, {1}], {
+                    Repeated[True]}], Exp, 
+                    TrueQ[
+                    Quiet[
+                    Apply[Equal, 
+                    Apply[Divide, Transpose[
+                    Rest[CalculateUtilities`GraphicsUtilities`Private`ticks]] - 
+                    Part[CalculateUtilities`GraphicsUtilities`Private`ticks, 
+                    1]]]]], 
+                    
+                    With[{CalculateUtilities`GraphicsUtilities`Private`slope = 
+                    Apply[Divide, 
+                    Apply[Subtract, 
+                    Part[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, {-1, 
+                    1}]]]}, 
+                    SetPrecision[(# - Part[
+                    CalculateUtilities`GraphicsUtilities`Private`ticks, 1, 
+                    1])/CalculateUtilities`GraphicsUtilities`Private`slope + 
+                    Part[CalculateUtilities`GraphicsUtilities`Private`ticks, 
+                    1, 2], 3]& ], True, None]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+iTicksToFunction[
+                    Blank[]] = None; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+RefineCoordinateFunction[
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`type, 
+                    Blank[]], 
+                    BlankNullSequence[]] := 
+                    CalculateUtilities`GraphicsUtilities`Private`type; 
+                    
+                    CalculateUtilities`GraphicsUtilities`Private`\
+RefineCoordinateFunction[Identity, {
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`min, 
+                    Blank[]], 
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`max, 
+                    Blank[]]}, 
+                    Blank[]] := 
+                    With[{CalculateUtilities`GraphicsUtilities`Private`nf = 
+                    CalculateUtilities`GraphicsUtilities`Private`numberForm, 
+                    CalculateUtilities`GraphicsUtilities`Private`acc = 
+                    Floor[Max[
+                    Ceiling[
+                    FullSimplify[Log[10, 
+                    Max[
+                    
+                    Abs[{CalculateUtilities`GraphicsUtilities`Private`min, 
+                    CalculateUtilities`GraphicsUtilities`Private`max}]]] - 
+                    Log[10, (CalculateUtilities`GraphicsUtilities`Private`max - 
+                    CalculateUtilities`GraphicsUtilities`Private`min)/100]]], 
+                    3] - RealExponent[
+                    Max[
+                    
+                    Abs[{CalculateUtilities`GraphicsUtilities`Private`min, 
+                    CalculateUtilities`GraphicsUtilities`Private`max}]]]]}, 
+                    CalculateUtilities`GraphicsUtilities`Private`nf[#, 
+                    CalculateUtilities`GraphicsUtilities`Private`acc]& ]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+RefineCoordinateFunction[Exp, {
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`min, 
+                    Blank[]], 
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`max, 
+                    Blank[]]}, 
+                    Blank[]] := 
+                    With[{CalculateUtilities`GraphicsUtilities`Private`prec = 
+                    Max[
+                    Ceiling[
+                    FullSimplify[Log[10, 
+                    Max[
+                    
+                    Abs[{CalculateUtilities`GraphicsUtilities`Private`min, 
+                    CalculateUtilities`GraphicsUtilities`Private`max}]]] - 
+                    Log[10, (CalculateUtilities`GraphicsUtilities`Private`max - 
+                    CalculateUtilities`GraphicsUtilities`Private`min)/100]]], 
+                    3]}, Quiet[
+                    RawBoxes[
+                    ToBoxes[
+                    NumberForm[
+                    Exp[#], 
+                    CalculateUtilities`GraphicsUtilities`Private`prec]]]]& ]; 
+                    CalculateUtilities`GraphicsUtilities`Private`\
+RefineCoordinateFunction[DateString, {
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`min, 
+                    Blank[]], 
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`max, 
+                    Blank[]]}, 
+                    Pattern[
+                    CalculateUtilities`GraphicsUtilities`Private`pts, 
+                    Blank[]]] := 
+                    Module[{
+                    CalculateUtilities`GraphicsUtilities`Private`dates, 
+                    CalculateUtilities`GraphicsUtilities`Private`spec}, 
+                    CalculateUtilities`GraphicsUtilities`Private`dates = 
+                    Map[DateList, 
+                    CalculateUtilities`GraphicsUtilities`Private`pts]; 
+                    CalculateUtilities`GraphicsUtilities`Private`spec = Switch[
+                    Map[Length, 
+                    Map[Union, 
+                    Transpose[
+                    CalculateUtilities`GraphicsUtilities`Private`dates]]], {
+                    Blank[], 1, 1, 
+                    BlankSequence[]}, {"Year"}, {
+                    Blank[], 
+                    Blank[], 1, 
+                    BlankSequence[]}, {"MonthNameShort", " ", "Year"}, 
+                    Blank[], {
+                    "DayShort", " ", "MonthNameShort", " ", "Year"}]; 
+                    If[(CalculateUtilities`GraphicsUtilities`Private`max - 
+                    CalculateUtilities`GraphicsUtilities`Private`min)/
+                    31536000 > 25, 
+                    CalculateUtilities`GraphicsUtilities`Private`spec = {
+                    "Year"}]; 
+                    With[{CalculateUtilities`GraphicsUtilities`Private`s = 
+                    CalculateUtilities`GraphicsUtilities`Private`spec}, 
+                    DateString[#, 
+                    CalculateUtilities`GraphicsUtilities`Private`s]& ]]; 
+                    CalculateUtilities`GraphicsUtilities`Private`numberForm = 
+                    Function[{
+                    CalculateUtilities`GraphicsUtilities`Private`a, 
+                    CalculateUtilities`GraphicsUtilities`Private`acc}, 
+                    Quiet[
+                    RawBoxes[
+                    ToBoxes[
+                    NumberForm[CalculateUtilities`GraphicsUtilities`Private`a, 
+                    Max[1, 
+                    Ceiling[
+                    RealExponent[
+                    CalculateUtilities`GraphicsUtilities`Private`a] + 
+                    CalculateUtilities`GraphicsUtilities`Private`acc]], 
+                    ExponentFunction -> (Null& ), 
+                    NumberFormat -> (StringReplace[#, StringExpression[
+                    Pattern[CalculateUtilities`GraphicsUtilities`Private`s, 
+                    BlankSequence[]], ".", EndOfString] -> 
+                    CalculateUtilities`GraphicsUtilities`Private`s]& )]]]]]]], 
+                   ReleaseHold[
+                    Uncompress[
+                    "6:eJztVm1v0zAQbinv7/APkPiMoIAEH5CADsakASUp3+\
+vFl9TCtYPtbIM/Dz67SZq1qxTTAZrSD6f60jy+e+656z04kFHa7/V6+\
+qI1HySn6RU83bdmJOe5LAR9d5wr0JpJkV7AZ9eticHsACc/\
+gHrfZWveSzUnxp9f4fuEJwUnBr4axplhoKe7iuQzlujaM1bs0P5kymVCOPsJD4fD4csXzx97GIxlTI\
+wBJfTTtpD5TBENaQ+BLlnzlhPxzR/vlcdPBecxfC9AJKDvWO9EEWphpCAc8wm+\
+9XwzdRMTM0RQouiZ0+TkOWp7gTaKiWwC8xzfOJ2sJ22Bicq05+ZWyc0mBfnwr+\
+IDGbuYvMcl7c6OwLAwzhl9J2X1z7kb4Pl1W3glj9YTh/\
+m94cgbMewQ9Cqdj1rXyTNSda2LfsHVWc2XrQZ5+pSp/5f2mTarYQzbhgHzA1vj9dpbhX/\
+WFl7m2PULcd+25rN3lIDrhkMluI+SFnwRRTPlgZdo+3R1bh0e40bFd4zOkApWOJGNs+wX1x93K/\
+B6U4ixdtMtSEfUMyCCHKyLOm53WMbMaEYUSSzw4rp+\
+2WQTWYcScGf72jNBmR1gnpBNyxOavXSp7sQksy9/\
+VNxKLieaDHnfEwYyUBtFfw3royy5gk5kYCQxXtDUazCHVVJjooJlPyhB4pwIhpDsl/24b/\
+7hciWQql2F6lKexYErzXF4Ev2ywPsgMjNr7tiBoyu4bTGbSB7VqotYmi5Pm+\
+0x3W8y3bihOdBDSQgtSfhA7zaFblP4q5vCyh7crQndmtCtCd2a0K0J/++a4CLGf6XfXoC4fg=="]]}\
+; Typeset`initDone$$ = True), DynamicModuleValues :> {}, Deinitialization :> 
+                None, UntrackedVariables :> {Typeset`size$$}, 
+                SynchronousInitialization -> True, 
+                UnsavedVariables :> {Typeset`initDone$$}, 
+                UndoTrackedVariables :> {
+                 Typeset`show$$, Typeset`bookmarkMode$$}], "Manipulate", 
+               Deployed -> True, StripOnInput -> False], TraditionalForm], 
+             Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output", 
+          {Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"minput"}]}]}], Typeset`pod3$$ = 
+   XMLElement[
+   "pod", {"title" -> "Alternate forms", "scanner" -> "Simplification", "id" -> 
+     "AlternateForm", "position" -> "300", "error" -> "false", "numsubpods" -> 
+     "2"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) (1/10100 \
++ x^(-1)) x)/39302143"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TemplateBox[{
+               FractionBox["32397487200", "39302143"], "\"  \"", 
+               StyleBox[
+                RowBox[{"\"(\"", "\[NoBreak]", 
+                  FormBox[
+                   TagBox[
+                    FormBox[
+                    TemplateBox[{"\"for \"", 
+                    RowBox[{"x", "\[NotEqual]", 
+                    RowBox[{"-", "10100"}]}]}, "RowDefault"], 
+                    TraditionalForm], Format[#, TraditionalForm]& ], 
+                   TraditionalForm], "\[NoBreak]", "\")\""}], {
+                 GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+                 LineIndent -> 0}, StripOnInput -> False]}, "RowDefault"], 
+             LineIndent -> 0], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext,minput,moutput"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "FunctionExpand[-x + (36094471 (320767200/357371 + (1/10100 + \
+x^(-1))^(-1)) (1/10100 + x^(-1)) x)/39302143]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             RowBox[{
+               FractionBox[
+                RowBox[{"36094471", " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["1", "x"], "+", 
+                    FractionBox["1", "10100"]}], ")"}], " ", "x", " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["320767200", "357371"], "-", 
+                    FractionBox[
+                    RowBox[{"10100", " ", "x"}], 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"x"}]}], "-", "10100"}]]}], ")"}]}], "39302143"], 
+               "-", "x"}], Identity], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["states", {"count" -> "1"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Step-by-step solution", "input" -> 
+         "AlternateForm__Step-by-step solution"}, {}]}]}], Typeset`pod4$$ = 
+   XMLElement[
+   "pod", {"title" -> "Expanded form", "scanner" -> "Simplification", "id" -> 
+     "ExpandedForm", "position" -> "400", "error" -> "false", "numsubpods" -> 
+     "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              FractionBox[
+               RowBox[{"357371", " ", "x"}], 
+               RowBox[{"3930214300", " ", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    FractionBox["1", "x"], "+", 
+                    FractionBox["1", "10100"]}], ")"}]}]], "-", 
+              FractionBox[
+               RowBox[{"36094471", " ", "x"}], "39302143"], "+", 
+              FractionBox["36094471", 
+               RowBox[{"39302143", " ", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    FractionBox["1", "x"], "+", 
+                    FractionBox["1", "10100"]}], ")"}]}]], "+", 
+              FractionBox["32397487200", "39302143"]}], TraditionalForm]], 
+          "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,formuladata"}]}], 
+     XMLElement["states", {"count" -> "1"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Step-by-step solution", "input" -> 
+         "ExpandedForm__Step-by-step solution"}, {}]}]}], Typeset`pod5$$ = 
+   XMLElement[
+   "pod", {"title" -> "Roots", "scanner" -> "Reduce", "id" -> 
+     "NoSolutionsFromReduce", "position" -> "500", "error" -> "false", 
+     "numsubpods" -> "1", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "Reduce[-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) \
+(1/10100 + x^(-1)) x)/39302143 == 0, {x}]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             
+             RowBox[{"\"(\"", "\[NoBreak]", "\"no roots exist\"", 
+               "\[NoBreak]", "\")\""}], {
+              GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+              LineIndent -> 0}, StripOnInput -> False], TraditionalForm]], 
+          "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata"}]}], 
+     XMLElement["states", {"count" -> "1"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Step-by-step solution", "input" -> 
+         "NoSolutionsFromReduce__Step-by-step solution"}, {}]}]}], 
+   Typeset`pod6$$ = XMLElement[
+   "pod", {"title" -> "Properties as a real function", "scanner" -> 
+     "FunctionProperties", "id" -> "PropertiesAsARealFunction", "position" -> 
+     "600", "error" -> "false", "numsubpods" -> "3"}, {
+     XMLElement["subpod", {"title" -> "Domain"}, {
+       XMLElement[
+       "minput", {}, {
+        "FunctionDomain[-x + (36094471 (320767200/357371 + (1/10100 + \
+x^(-1))^(-1)) (1/10100 + x^(-1)) x)/39302143, x]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TemplateBox[{"\"{\"", 
+              RowBox[{"x", "\[Element]", 
+                TagBox["\[DoubleStruckCapitalR]", 
+                 Function[{}, Reals]]}], "\" : \"", 
+              TemplateBox[{
+                StyleBox["\" and \"", {
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}, StripOnInput -> False], 
+                RowBox[{"x", "\[NotEqual]", 
+                  RowBox[{"-", "10100"}]}], 
+                RowBox[{"x", "\[NotEqual]", "0"}]}, "RowWithSeparator"], 
+              "\"}\""}, "RowDefault"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata"}]}], 
+     XMLElement["subpod", {"title" -> "Range"}, {
+       XMLElement[
+       "minput", {}, {
+        "FunctionRange[-x + (36094471 (320767200/357371 + (1/10100 + \
+x^(-1))^(-1)) (1/10100 + x^(-1)) x)/39302143, x, y]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TemplateBox[{"\"{\"", 
+              RowBox[{"y", "\[Element]", 
+                TagBox["\[DoubleStruckCapitalR]", 
+                 Function[{}, Reals]]}], "\" : \"", 
+              RowBox[{
+                RowBox[{"39302143", " ", "y"}], "\[LongEqual]", 
+                TagBox["32397487200", Identity]}], "\"}\""}, "RowDefault"], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata"}]}], 
+     XMLElement["subpod", {"title" -> "Parity"}, {
+       XMLElement[
+       "minput", {}, {
+        "Simplify[-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) \
+(1/10100 + x^(-1)) x)/39302143 == -(-x) + (36094471 (320767200/357371 + \
+(1/10100 + (-x)^(-1))^(-1)) (1/10100 + (-x)^(-1)) (-x))/39302143]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox["\"even\"", TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata"}]}], 
+     XMLElement["infos", {"count" -> "1"}, {
+       XMLElement["info", {"text" -> "R is the set of real numbers"}, {
+         XMLElement[
+         "link", {
+          "url" -> "http://reference.wolfram.com/language/ref/Reals.html", 
+           "text" -> "Documentation", "title" -> "Documentation"}, {}], 
+         XMLElement[
+         "link", {
+          "url" -> "http://mathworld.wolfram.com/R.html", "text" -> 
+           "Definition", "title" -> "MathWorld"}, {}], 
+         XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+           Cell[
+            BoxData[
+             FormBox[
+              TemplateBox[{
+                TagBox["\[DoubleStruckCapitalR]", 
+                 Function[{}, Reals]], "\" \"", 
+                "\"is the set of real numbers\""}, "RowDefault"], 
+              TraditionalForm]], "Output", {
+            Background -> None, 
+             GraphicsBoxOptions -> {
+              DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+               DefaultAxesStyle -> Directive[
+                 GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], 
+                 FontOpacity -> 1, "GraphicsAxes"], DefaultFrameStyle -> 
+               Directive[
+                 GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], 
+                 FontOpacity -> 1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+               Directive[
+                FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+               DefaultTicksStyle -> 
+               Directive[
+                FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+             Graphics3DBoxOptions -> {
+              DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+            NumberPoint -> ".", 
+            RenderingOptions -> {
+             "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}]}]}]}], 
+   Typeset`pod7$$ = XMLElement[
+   "pod", {"title" -> "Indefinite integral", "scanner" -> "Integral", "id" -> 
+     "IndefiniteIntegral", "position" -> "700", "error" -> "false", 
+     "numsubpods" -> "1", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "Integrate[-x + (36094471 (320767200/357371 + (1/10100 + \
+x^(-1))^(-1)) (1/10100 + x^(-1)) x)/39302143, x]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              TagBox[
+               RowBox[{"\[Integral]", 
+                 RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "x"}], "+", 
+                    FractionBox[
+                    RowBox[{"36094471", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["320767200", "357371"], "+", 
+                    FractionBox["1", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}]]}], ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}], ")"}], " ", "x"}], "39302143"]}],
+                     ")"}], 
+                   RowBox[{"\[DifferentialD]", "x"}]}]}], HoldForm], 
+              "\[LongEqual]", 
+              TagBox[
+               StyleBox[
+                RowBox[{
+                  StyleBox[
+                   FractionBox[
+                    RowBox[{"32397487200", " ", "x"}], "39302143"], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}, StripOnInput -> False], "+", 
+                  StyleBox[
+                  "\"constant\"", {
+                   Magnification -> 0.9 Inherited, FontFamily -> "Helvetica", 
+                    FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}], {
+                 GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+                 LineIndent -> 0}, StripOnInput -> False], Identity]}], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["states", {"count" -> "1"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Step-by-step solution", "input" -> 
+         "IndefiniteIntegral__Step-by-step solution"}, {}]}]}], 
+   Typeset`pod8$$ = XMLElement[
+   "pod", {"title" -> "Limit", "scanner" -> "GlobalExtrema", "id" -> "Limit", 
+     "position" -> "800", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "Limit[-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) \
+(1/10100 + x^(-1)) x)/39302143, {x -> -Infinity, x -> Infinity}]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              TagBox[
+               RowBox[{
+                 UnderscriptBox["lim", 
+                  RowBox[{"x", "\[Rule]", 
+                    RowBox[{"\[PlusMinus]", "\[Infinity]"}]}]], 
+                 "\[ThinSpace]", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "x"}], "+", 
+                    FractionBox[
+                    RowBox[{"36094471", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["320767200", "357371"], "+", 
+                    FractionBox["1", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}]]}], ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}], ")"}], " ", "x"}], "39302143"]}],
+                    ")"}]}], HoldForm], "\[LongEqual]", 
+              TagBox[
+               FractionBox["32397487200", "39302143"], Identity], 
+              "\[TildeTilde]", 
+              TagBox["824.3185925001596`", Identity]}], TraditionalForm]], 
+          "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+]}], Typeset`pod9$$ = XMLElement[
+   "pod", {"title" -> "Series representations", "scanner" -> 
+     "MathematicalFunctionData", "id" -> 
+     "SeriesRepresentations:MathematicalFunctionIdentityData", "position" -> 
+     "900", "error" -> "false", "numsubpods" -> "2"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) (1/10100 \
++ x^(-1)) x)/39302143 == Sum[Piecewise[{{32397487200/39302143, n == 0}}, 0] \
+x^n, {n, -Infinity, Infinity}]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FrameBox[
+             TagBox[
+              RowBox[{
+                RowBox[{
+                  RowBox[{"-", "x"}], "+", 
+                  FractionBox[
+                   RowBox[{"36094471", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["320767200", "357371"], "+", 
+                    FractionBox["1", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}]]}], ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}], ")"}], " ", "x"}], "39302143"]}],
+                 "\[LongEqual]", 
+                RowBox[{
+                  UnderoverscriptBox["\[Sum]", 
+                   RowBox[{"n", "=", "-\[Infinity]"}], "\[Infinity]"], 
+                  RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    GridBox[{{"\[Piecewise]", 
+                    GridBox[{{
+                    TagBox[
+                    FractionBox["32397487200", "39302143"], HoldForm], 
+                    StyleBox[
+                    RowBox[{"n", "\[LongEqual]", "0"}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox["0", HoldForm], 
+                    StyleBox[
+                    "\"otherwise\"", {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}}, ColumnAlignments -> {Left}, 
+                    ColumnSpacings -> 1.2, ColumnWidths -> Automatic, 
+                    AllowedDimensions -> {2, Automatic}, Selectable -> True, 
+                    Editable -> True]}}, AllowScriptLevelChange -> False, 
+                    ColumnAlignments -> {Left}, ColumnSpacings -> 0.5, 
+                    ColumnWidths -> Automatic], "Piecewise", SyntaxForm -> 
+                    Span, SelectWithContents -> True, Selectable -> False, 
+                    Editable -> False, DeleteWithContents -> True], ")"}], 
+                    " ", 
+                    SuperscriptBox["x", "n"]}]}]}], HoldForm], FrameStyle -> 
+             None, FrameMargins -> {{-1, -1}, {3, 3}}], TraditionalForm]], 
+          "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, RenderingOptions -> {\
+"3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata,formuladata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "-x + (36094471 (320767200/357371 + (1/10100 + x^(-1))^(-1)) (1/10100 \
++ x^(-1)) x)/39302143 == Sum[Piecewise[{{32397487200/39302143, n == 0}}, 0] \
+(-1 + x)^n, {n, -Infinity, Infinity}]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FrameBox[
+             TagBox[
+              RowBox[{
+                RowBox[{
+                  RowBox[{"-", "x"}], "+", 
+                  FractionBox[
+                   RowBox[{"36094471", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["320767200", "357371"], "+", 
+                    FractionBox["1", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}]]}], ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["1", "10100"], "+", 
+                    FractionBox["1", "x"]}], ")"}], " ", "x"}], "39302143"]}],
+                 "\[LongEqual]", 
+                RowBox[{
+                  UnderoverscriptBox["\[Sum]", 
+                   RowBox[{"n", "=", "-\[Infinity]"}], "\[Infinity]"], 
+                  RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    GridBox[{{"\[Piecewise]", 
+                    GridBox[{{
+                    TagBox[
+                    FractionBox["32397487200", "39302143"], HoldForm], 
+                    StyleBox[
+                    RowBox[{"n", "\[LongEqual]", "0"}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox["0", HoldForm], 
+                    StyleBox[
+                    "\"otherwise\"", {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}}, ColumnAlignments -> {Left}, 
+                    ColumnSpacings -> 1.2, ColumnWidths -> Automatic, 
+                    AllowedDimensions -> {2, Automatic}, Selectable -> True, 
+                    Editable -> True]}}, AllowScriptLevelChange -> False, 
+                    ColumnAlignments -> {Left}, ColumnSpacings -> 0.5, 
+                    ColumnWidths -> Automatic], "Piecewise", SyntaxForm -> 
+                    Span, SelectWithContents -> True, Selectable -> False, 
+                    Editable -> False, DeleteWithContents -> True], ")"}], 
+                    " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "x"}], ")"}], "n"]}]}]}], 
+              HoldForm], FrameStyle -> None, 
+             FrameMargins -> {{-1, -1}, {3, 3}}], TraditionalForm]], 
+          "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata,formuladata"}]}]}], 
+   Typeset`aux1$$ = {True, False, {False}, True}, Typeset`aux2$$ = {
+   True, False, {False}, True}, Typeset`aux3$$ = {
+   True, False, {False, False}, True}, Typeset`aux4$$ = {
+   True, False, {False}, True}, Typeset`aux5$$ = {True, False, {False}, True},
+    Typeset`aux6$$ = {True, False, {False, False, False}, True}, 
+   Typeset`aux7$$ = {True, False, {False}, True}, Typeset`aux8$$ = {
+   True, False, {False}, True}, Typeset`aux9$$ = {
+   True, False, {False, False}, True}, Typeset`asyncpods$$ = {}, 
+   Typeset`nonpods$$ = {}, Typeset`initdone$$ = True, Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "9", "datatypes" -> 
+    "Math,MathematicalFunctionIdentity", "timedout" -> "", "timedoutpods" -> 
+    "", "timing" -> "2.993", "parsetiming" -> "0.913", "parsetimedout" -> 
+    "false", "recalculate" -> "", "id" -> 
+    "MSPa254716e9ih6i5cfh5ci30000502f8bca306dhg1a", "host" -> 
+    "http://www4b.wolframalpha.com", "server" -> "41", "related" -> 
+    "http://www4b.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa254816e9ih6i5cfh5ci300003535b3iii5h20dh77565264462549653373", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> -5., 
+    "Date" -> {2018, 2, 11, 21, 31, 8.853557`7.699692774637846}, "Line" -> 18,
+     "SessionID" -> 21454861171725435215}, Typeset`showpods$$ = {1, 2, 3, 4, 
+   5, 6, 7, 8, 9}, Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, 
+   Typeset`open$$ = False, Typeset`newq$$ = 
+   "-x + (36094471*(320767200/357371 + (1/10100 + x^(-1))^(-1))*(1/10100 + \
+x^(-1))*x)/39302143"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$, Typeset`pod7$$, Typeset`pod8$$, 
+         Typeset`pod9$$}, {
+        Typeset`aux1$$, Typeset`aux2$$, Typeset`aux3$$, Typeset`aux4$$, 
+         Typeset`aux5$$, Typeset`aux6$$, Typeset`aux7$$, Typeset`aux8$$, 
+         Typeset`aux9$$}, Typeset`chosen$$, Typeset`open$$, 
+        Typeset`elements$$, Typeset`q$$, Typeset`opts$$, Typeset`nonpods$$, 
+        Typeset`queryinfo$$, Typeset`sessioninfo$$, Typeset`showpods$$, 
+        Typeset`failedpods$$, Typeset`newq$$}]], StandardForm],
+    ImageSizeCache->{741., {643., 648.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; 
+     WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{
+        Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$, Typeset`pod7$$, Typeset`pod8$$, 
+         Typeset`pod9$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Print", "WolframAlphaFullOutput",
+ CellChangeTimes->{
+  3.727391469179975*^9},ExpressionUUID->"64192710-954f-4b96-98a2-\
+5d7a42cf14d6"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ishort", ":=", 
+  RowBox[{"vin", " ", "/", " ", "r1"}]}]], "Input",
+ CellChangeTimes->{{3.727392115856183*^9, 
+  3.7273921329640703`*^9}},ExpressionUUID->"23f371e7-8cc7-419b-a537-\
+9258603aef0d"],
+
+Cell[BoxData[
+ RowBox[{"rthd", ":=", 
+  RowBox[{"vth", "/", "ishort"}]}]], "Input",
+ CellChangeTimes->{{3.727392135676059*^9, 
+  3.7273921773901167`*^9}},ExpressionUUID->"60636176-6e5d-47b3-8ae1-\
+cb07d6d296b3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", "rthd", "]"}]], "Input",
+ CellChangeTimes->{{3.727392179871117*^9, 
+  3.7273921968608093`*^9}},ExpressionUUID->"820fdeac-7066-49a2-9ab4-\
+1866ee980aa0"],
+
+Cell[BoxData["824.3185925001596`"], "Output",
+ CellChangeTimes->{3.727392197134817*^9, 
+  3.7273926561326113`*^9},ExpressionUUID->"b7b38483-d873-4b47-9959-\
+765edb067bd8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["ishort"], "Input",
+ CellChangeTimes->{{3.7273922178895493`*^9, 
+  3.72739221926624*^9}},ExpressionUUID->"c6c97914-9cb8-46cc-9022-\
+e94aae5e7b89"],
+
+Cell[BoxData[
+ FractionBox["357371", "21384480"]], "Output",
+ CellChangeTimes->{{3.727392219961069*^9, 
+  3.7273922264226427`*^9}},ExpressionUUID->"ca2ea66c-8531-476c-8ea5-\
+0d00616550e6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  FractionBox["357371", "21384480"], "]"}]], "Input",
+ NumberMarks->False,ExpressionUUID->"f49e0c0c-91d6-4471-b66d-ff3693f75c65"],
+
+Cell[BoxData["0.016711699325866237`"], "Output",
+ CellChangeTimes->{
+  3.727392228425906*^9},ExpressionUUID->"49b4a6c7-a513-421c-9c3a-\
+b94906cf7e4a"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"vin", " ", ":=", " ", "15"}]], "Input",
+ CellChangeTimes->{{3.7273922222894917`*^9, 
+  3.727392224782737*^9}},ExpressionUUID->"d16e198a-0aa6-4007-844b-\
+214f7636c9e5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", "vth", "]"}]], "Input",
+ CellChangeTimes->{{3.7273926295568323`*^9, 
+  3.727392635213748*^9}},ExpressionUUID->"34b90b8f-64e7-4893-b242-\
+e07176681d2b"],
+
+Cell[BoxData["13.77576446658392`"], "Output",
+ CellChangeTimes->{{3.7273926306411343`*^9, 
+  3.727392635443221*^9}},ExpressionUUID->"e7bbfcbd-466b-4bca-9a40-\
+be3531789d4e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"rth", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7273927160622997`*^9, 3.727392720184744*^9}, {
+  3.727392764726718*^9, 
+  3.727392770166353*^9}},ExpressionUUID->"f3ab0128-9b5d-433f-b4a3-\
+79ff1771ba73"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "1"}], "+", 
+  FractionBox[
+   RowBox[{"36094471", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["320767200", "357371"], "+", 
+      FractionBox["1", 
+       RowBox[{
+        FractionBox["1", "10100"], "+", 
+        FractionBox["1", "x"]}]]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["1", "10100"], "+", 
+      FractionBox["1", "x"]}], ")"}]}], "39302143"], "-", 
+  FractionBox[
+   RowBox[{"36094471", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["320767200", "357371"], "+", 
+      FractionBox["1", 
+       RowBox[{
+        FractionBox["1", "10100"], "+", 
+        FractionBox["1", "x"]}]]}], ")"}]}], 
+   RowBox[{"39302143", " ", "x"}]], "+", 
+  FractionBox["36094471", 
+   RowBox[{"39302143", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["1", "10100"], "+", 
+      FractionBox["1", "x"]}], ")"}], " ", "x"}]]}]], "Output",
+ CellChangeTimes->{
+  3.727392770684561*^9},ExpressionUUID->"23f9894b-48aa-4d12-a822-\
+4581583d54a7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", "rthd", "]"}]], "Input",
+ CellChangeTimes->{{3.727392879561338*^9, 
+  3.727392880440407*^9}},ExpressionUUID->"bc86b918-4039-49d1-af30-\
+400b56d436d7"],
+
+Cell[BoxData["1189.1089445862679`"], "Output",
+ CellChangeTimes->{
+  3.727392880985984*^9},ExpressionUUID->"d670ddd3-e93e-4183-b1cb-\
+2adeb78c3071"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"rth", "[", 
+   RowBox[{"10", "^", "1000000"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7273929749715757`*^9, 
+  3.727393017324871*^9}},ExpressionUUID->"272a4135-b3c3-4067-adf0-\
+61e195c9451e"],
+
+Cell[BoxData["1189.1089445862679`"], "Output",
+ CellChangeTimes->{{3.72739298589377*^9, 
+  3.727393017766657*^9}},ExpressionUUID->"aa7c42b4-d734-4f31-9367-\
+6277b206f3c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"1190", " ", "\[Equal]", " ", 
+    RowBox[{"rth", "[", "x", "]"}]}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.727393843906829*^9, 3.727393870847521*^9}, {
+  3.7273939063272753`*^9, 
+  3.727393908631649*^9}},ExpressionUUID->"85e3fa9b-d0a3-4797-ab92-\
+64a3724f6643"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.727393871610899*^9, 
+  3.7273939093127213`*^9},ExpressionUUID->"86745e01-28dc-4912-b2de-\
+3239f770ce0d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"r1", ":=", "1000"}]], "Input",
+ CellChangeTimes->{{3.727395184386842*^9, 
+  3.727395187269455*^9}},ExpressionUUID->"68669e74-c7dd-42ef-82f0-\
+455dba725ba6"],
+
+Cell[BoxData[
+ RowBox[{"r2", ":=", "1000"}]], "Input",
+ CellChangeTimes->{{3.727395188140706*^9, 
+  3.727395190267256*^9}},ExpressionUUID->"91f05c63-c29c-4bb2-9b61-\
+bc82dc4e7c3e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rth", "[", "5000", "]"}]], "Input",
+ CellChangeTimes->{{3.727395192168043*^9, 
+  3.727395207184589*^9}},ExpressionUUID->"450d0ce2-dbf5-4dc2-ade1-\
+6b35edbff3f9"],
+
+Cell[BoxData["500"], "Output",
+ CellChangeTimes->{{3.727395198138077*^9, 
+  3.727395207475041*^9}},ExpressionUUID->"ae6d61e2-a7da-4d72-944c-\
+4995aaee0e75"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"vload", "[", "5000", " ", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7273952129764557`*^9, 
+  3.727395238538786*^9}},ExpressionUUID->"03892e11-1f19-4126-a6d9-\
+0d9ef888d182"],
+
+Cell[BoxData["6.818181818181818`"], "Output",
+ CellChangeTimes->{{3.727395225327372*^9, 
+  3.7273952389071493`*^9}},ExpressionUUID->"b08c5daf-2161-4803-aafa-\
+3d3e1062e9a7"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 455, 13, 30, "Input",ExpressionUUID->"1dabdd49-a373-4d0c-bb3a-0fe2059e73d3"],
+Cell[1016, 35, 266, 7, 30, "Input",ExpressionUUID->"f03e4eff-b2d3-44d8-8750-362600568518"],
+Cell[1285, 44, 370, 11, 30, "Input",ExpressionUUID->"4529f224-191e-4816-89df-1400634d57ea"],
+Cell[1658, 57, 303, 8, 30, "Input",ExpressionUUID->"020a937f-33fc-4edd-88b5-360c604638ad"],
+Cell[1964, 67, 285, 8, 30, "Input",ExpressionUUID->"1893487a-4202-480c-b783-9c95a9b9ef31"],
+Cell[2252, 77, 428, 10, 30, "Input",ExpressionUUID->"3750401b-3ab4-43c4-b0a5-006dd7ce0bbd"],
+Cell[CellGroupData[{
+Cell[2705, 91, 157, 3, 30, "Input",ExpressionUUID->"bb1b8d96-2bf8-4f11-bb2a-fc9158853086"],
+Cell[2865, 96, 132, 3, 34, "Output",ExpressionUUID->"40bca475-7344-4cf8-89a8-549f04263d21"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3034, 104, 184, 4, 30, "Input",ExpressionUUID->"ba7fe623-8bd4-405d-8f7b-0df602afa47b"],
+Cell[3221, 110, 524, 18, 72, "Output",ExpressionUUID->"7e48150e-8238-4997-bd14-57275d3ca2d9"]
+}, Open  ]],
+Cell[3760, 131, 613, 18, 30, "Input",ExpressionUUID->"da187aa1-71f5-4ffa-82ac-ec1f7ac3c603"],
+Cell[4376, 151, 188, 4, 30, "Input",ExpressionUUID->"d683ffc6-9bc2-4843-a7f4-538c9e540ebb"],
+Cell[CellGroupData[{
+Cell[4589, 159, 264, 6, 30, "Input",ExpressionUUID->"bd687b2e-36fd-4a27-9e51-fc3512fb3044"],
+Cell[4856, 167, 248, 4, 34, "Output",ExpressionUUID->"b07f9e47-bd4e-4d43-acda-1c4437cd9296"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5141, 176, 240, 5, 30, "Input",ExpressionUUID->"0494da6d-2d18-4292-b528-228f0ace5fed"],
+Cell[5384, 183, 211, 4, 51, "Output",ExpressionUUID->"31466ad4-39dd-4fbf-a4f8-7ca776abd921"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5632, 192, 185, 4, 41, "WolframAlphaLong",ExpressionUUID->"aa0d9fc1-6db3-4c07-9b72-ade2a9133802"],
+Cell[5820, 198, 85005, 1691, 1301, "Print",ExpressionUUID->"64192710-954f-4b96-98a2-5d7a42cf14d6"]
+}, Open  ]],
+Cell[90840, 1892, 219, 5, 30, "Input",ExpressionUUID->"23f371e7-8cc7-419b-a537-9258603aef0d"],
+Cell[91062, 1899, 211, 5, 30, "Input",ExpressionUUID->"60636176-6e5d-47b3-8ae1-cb07d6d296b3"],
+Cell[CellGroupData[{
+Cell[91298, 1908, 185, 4, 30, "Input",ExpressionUUID->"820fdeac-7066-49a2-9ab4-1866ee980aa0"],
+Cell[91486, 1914, 171, 3, 34, "Output",ExpressionUUID->"b7b38483-d873-4b47-9959-765edb067bd8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[91694, 1922, 159, 3, 30, "Input",ExpressionUUID->"c6c97914-9cb8-46cc-9022-e94aae5e7b89"],
+Cell[91856, 1927, 188, 4, 51, "Output",ExpressionUUID->"ca2ea66c-8531-476c-8ea5-0d00616550e6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[92081, 1936, 163, 3, 48, "Input",ExpressionUUID->"f49e0c0c-91d6-4471-b66d-ff3693f75c65"],
+Cell[92247, 1941, 150, 3, 34, "Output",ExpressionUUID->"49b4a6c7-a513-421c-9c3a-b94906cf7e4a"]
+}, Open  ]],
+Cell[92412, 1947, 191, 4, 30, "Input",ExpressionUUID->"d16e198a-0aa6-4007-844b-214f7636c9e5"],
+Cell[CellGroupData[{
+Cell[92628, 1955, 184, 4, 30, "Input",ExpressionUUID->"34b90b8f-64e7-4893-b242-e07176681d2b"],
+Cell[92815, 1961, 173, 3, 34, "Output",ExpressionUUID->"e7bbfcbd-466b-4bca-9a40-be3531789d4e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[93025, 1969, 285, 7, 30, "Input",ExpressionUUID->"f3ab0128-9b5d-433f-b4a3-79ff1771ba73"],
+Cell[93313, 1978, 1021, 34, 149, "Output",ExpressionUUID->"23f9894b-48aa-4d12-a822-4581583d54a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[94371, 2017, 183, 4, 30, "Input",ExpressionUUID->"bc86b918-4039-49d1-af30-400b56d436d7"],
+Cell[94557, 2023, 148, 3, 34, "Output",ExpressionUUID->"d670ddd3-e93e-4183-b1cb-2adeb78c3071"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[94742, 2031, 243, 6, 30, "Input",ExpressionUUID->"272a4135-b3c3-4067-adf0-61e195c9451e"],
+Cell[94988, 2039, 171, 3, 34, "Output",ExpressionUUID->"aa7c42b4-d734-4f31-9367-6277b206f3c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95196, 2047, 334, 8, 30, "Input",ExpressionUUID->"85e3fa9b-d0a3-4797-ab92-64a3724f6643"],
+Cell[95533, 2057, 171, 4, 34, "Output",ExpressionUUID->"86745e01-28dc-4912-b2de-3239f770ce0d"]
+}, Open  ]],
+Cell[95719, 2064, 180, 4, 30, "Input",ExpressionUUID->"68669e74-c7dd-42ef-82f0-455dba725ba6"],
+Cell[95902, 2070, 180, 4, 30, "Input",ExpressionUUID->"91f05c63-c29c-4bb2-9b61-bc82dc4e7c3e"],
+Cell[CellGroupData[{
+Cell[96107, 2078, 185, 4, 30, "Input",ExpressionUUID->"450d0ce2-dbf5-4dc2-ade1-6b35edbff3f9"],
+Cell[96295, 2084, 156, 3, 34, "Output",ExpressionUUID->"ae6d61e2-a7da-4d72-944c-4995aaee0e75"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[96488, 2092, 222, 5, 30, "Input",ExpressionUUID->"03892e11-1f19-4126-a6d9-0d9ef888d182"],
+Cell[96713, 2099, 173, 3, 68, "Output",ExpressionUUID->"b08c5daf-2161-4803-aafa-3d3e1062e9a7"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
