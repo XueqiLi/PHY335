@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex unit-5"] 1523773175 "unit-5.aux" "unit-5.bbl" "unit-5" 1523773529
+["bibtex unit-5"] 1523776859 "unit-5.aux" "unit-5.bbl" "unit-5" 1523776860
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst" 1480098436 71518 fec93f06df0c073f83d2330456bd19c2 ""
   "cite.bib" 1522012826 363 3349b4b272f1907cb32cecd3cf942233 ""
-  "unit-5.aux" 1523773529 4350 9ff1c48f60658f4c242cc89075ab6f50 ""
-  "unit-5Notes.bib" 1523773529 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "unit-5.aux" 1523776860 4669 e30898659ddc12b8e8c5bba4ba7edd18 ""
+  "unit-5Notes.bib" 1523776860 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "unit-5.blg"
   "unit-5.bbl"
-["pdflatex"] 1523773528 "unit-5.tex" "unit-5.pdf" "unit-5" 1523773529
+["pdflatex"] 1523776859 "unit-5.tex" "unit-5.pdf" "unit-5" 1523776860
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1480098698 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -138,11 +138,11 @@
   "image/integrator/tri.pdf" 1523754397 373572 276d9c909030e6bba5da7787ea9ead6a ""
   "image/rate/slope.pdf" 1523754556 400728 5f58577e9ec8d41262b483adf9fda4cb ""
   "image/rate/wave.pdf" 1523754497 779774 443835c846f4be78d7bc27bc5fb040d1 ""
-  "unit-5.aux" 1523773529 4350 9ff1c48f60658f4c242cc89075ab6f50 ""
-  "unit-5.bbl" 1523773175 1984 b68c31deb1db589a77cf4936360c75bb "bibtex unit-5"
-  "unit-5.tex" 1523773526 18360 52d9b5e73fdbd58e0457c9aa3d37174e ""
+  "unit-5.aux" 1523776860 4669 e30898659ddc12b8e8c5bba4ba7edd18 ""
+  "unit-5.bbl" 1523776859 1984 b68c31deb1db589a77cf4936360c75bb "bibtex unit-5"
+  "unit-5.tex" 1523776858 21559 894ce97b29129b35b8a4bc6ec7090525 ""
   (generated)
   "unit-5.aux"
-  "unit-5.log"
-  "unit-5.pdf"
   "unit-5Notes.bib"
+  "unit-5.pdf"
+  "unit-5.log"

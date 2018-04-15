@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 APR 2018 02:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 APR 2018 03:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -854,42 +854,42 @@ Package pdftex.def Info: image/integrator/highFre.pdf used on input line 251.
 File: image/differentiator/Differentiator-Lab.pdf Graphic file (type pdf)
  <use image/differentiator/Differentiator-Lab.pdf>
 Package pdftex.def Info: image/differentiator/Differentiator-Lab.pdf used on in
-put line 265.
+put line 267.
 (pdftex.def)             Requested size: 104.91331pt x 72.26999pt.
 
 <image/differentiator/sine.pdf, id=229, 791.44223pt x 597.23125pt>
 File: image/differentiator/sine.pdf Graphic file (type pdf)
 
 <use image/differentiator/sine.pdf>
-Package pdftex.def Info: image/differentiator/sine.pdf used on input line 273.
+Package pdftex.def Info: image/differentiator/sine.pdf used on input line 275.
 (pdftex.def)             Requested size: 120.54135pt x 90.95688pt.
 
 <image/differentiator/tri.pdf, id=230, 793.09128pt x 597.23125pt>
 File: image/differentiator/tri.pdf Graphic file (type pdf)
 
 <use image/differentiator/tri.pdf>
-Package pdftex.def Info: image/differentiator/tri.pdf used on input line 275.
+Package pdftex.def Info: image/differentiator/tri.pdf used on input line 277.
 (pdftex.def)             Requested size: 120.54135pt x 90.7655pt.
 
 <image/differentiator/sqr.pdf, id=231, 803.2616pt x 597.23125pt>
 File: image/differentiator/sqr.pdf Graphic file (type pdf)
 
 <use image/differentiator/sqr.pdf>
-Package pdftex.def Info: image/differentiator/sqr.pdf used on input line 277.
-(pdftex.def)             Requested size: 196.80075pt x 146.31837pt.
+Package pdftex.def Info: image/differentiator/sqr.pdf used on input line 279.
+(pdftex.def)             Requested size: 172.19925pt x 128.02858pt.
 
 <image/rate/wave.pdf, id=232, 796.30832pt x 597.23125pt>
 File: image/rate/wave.pdf Graphic file (type pdf)
 
 <use image/rate/wave.pdf>
-Package pdftex.def Info: image/rate/wave.pdf used on input line 288.
+Package pdftex.def Info: image/rate/wave.pdf used on input line 290.
 (pdftex.def)             Requested size: 120.54135pt x 90.40099pt.
 
 <image/rate/slope.pdf, id=233, 792.08765pt x 597.23125pt>
 File: image/rate/slope.pdf Graphic file (type pdf)
 
 <use image/rate/slope.pdf>
-Package pdftex.def Info: image/rate/slope.pdf used on input line 290.
+Package pdftex.def Info: image/rate/slope.pdf used on input line 292.
 (pdftex.def)             Requested size: 120.54135pt x 90.88397pt.
 
 
@@ -902,14 +902,14 @@ qr.pdf> <./image/integrator/highFre.pdf> <./image/differentiator/Differentiator
 /image/differentiator/sqr.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 297.
+ on input line 298.
 
 (./unit-5.bbl) [5 <./image/rate/wave.pdf> <./image/rate/slope.pdf>]
 (./unit-5.aux) ) 
 Here is how much of TeX's memory you used:
  15652 strings out of 492995
  302991 string characters out of 6132704
- 338205 words of memory out of 5000000
+ 354205 words of memory out of 5000000
  19035 multiletter control sequences out of 15000+600000
  12474 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -926,7 +926,7 @@ pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on unit-5.pdf (5 pages, 6484944 bytes).
+Output written on unit-5.pdf (5 pages, 6489501 bytes).
 PDF statistics:
  382 PDF objects out of 1000 (max. 8388607)
  276 compressed objects within 3 object streams

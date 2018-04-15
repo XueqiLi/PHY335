@@ -36,7 +36,7 @@
 
 
 % \begin{abstract}
-% Here I tell what I have done... And I have done a lot but it is hard to tell what exactly I have done...
+% In this lab we introduced operational amplifier and the negative feedback. Furthermore, a few importent applications of amplifier, such as follower, inverting and non-inverting amplifier, integrator, and differentiator were discussed and their output voltage formulas have been derived. Moreover, the limit of the opamp was explored and two methods to measure the slew rate have been given as examples.
 % \end{abstract}
 
 \maketitle
@@ -258,6 +258,8 @@ where $A_0$ is a very large number. Usually it is higher than $10^5$. The impeda
 
         For the one with T network, we observed the same shift but the shift is slower. When frequency increase, the output drop below to 1V at 300Hz, and unrecognizable for the higher frequency.
 
+        We also measure the input and the output voltage when input is 1V (2V peak to peak) square wave with different frequency. The output volrage after 500Hz is almost zero and unrecognizable. The data obtained is in appendix.
+
         For both case, when input voltage have a large amplitude, the output usually be cut off on the $\pm$15V.
     \subsection{Differentiator}
         \begin{figure}[h]
@@ -274,7 +276,7 @@ where $A_0$ is a very large number. Usually it is higher than $10^5$. The impeda
             \subcaptionbox{Triangle wave}[.49\linewidth][c]{%
                 \includegraphics[width=.49\linewidth]{image/differentiator/tri.pdf}}
             \subcaptionbox{Square wave}[\linewidth][c]{%
-                \includegraphics[width=.8\linewidth]{image/differentiator/sqr.pdf}}
+                \includegraphics[width=.7\linewidth]{image/differentiator/sqr.pdf}}
             \caption{Result of different wave form for differentiator}
             \label{fig:differentiatorWave}
         \end{figure}
@@ -298,8 +300,27 @@ where $A_0$ is a very large number. Usually it is higher than $10^5$. The impeda
         \subsubsection{Sudden voltage change}
             A sudden voltage change can also give us a chance to observed the slew rate. In the lab, we use a follower as in Figure~\ref{fig:follower}. We apply a square wave in the input and find hot how the output delay when the voltage jump from $-V_0$ to $V_0$. THe result obtained is in Figure~\ref{fig:slewRate}b. We see that the voltage change is 10V and the time it takes is 0.8(1)$\mu$s.
 \section{Analysis}
+    \subsection{Follower}
+        We obtained a perfect result. The output is exactly same as the ouput in all frequency and DC. Different than the follower with BJT transistor, the opamp follower does not have a 0.6V voltage drop on the output.
+
+        When we use a load resistor. We see that the output voltage is same as without load resistor. However, when we remove the follower, connect the load resistor directly to the voltage divider, we observed a huge voltage drop on load resistor. This prove that the impedance of our follower is ideal. This is a well functioning follower.
+    \subsection{Amplifier}
+        We have used two different amplifier. We do achieve a 26dB amplifier. From the data, we see that at higher frequency, the output voltage drop significantly for all different gain, which means the gain is become smaller. This follow the first limit of opamp.
+
+        On the other hand, from Figurer~\ref{fig:amplifierLab}c, we see that the inverting amplifier indeed inverting the input.
+    \subsection{Integrator and Differentiator}
+        The integrator worked well on different wave form, as in Figure~\ref{fig:integratorWave}. The frequency range it can be used is 100Hz without the T network and is 300Hz with the T network. We also see that the T network slow sheft speed.
+
+        When measure the input and output voltage for square wave, we see that the output voltage drop significantly follow the first limit of opamp.
+
+        The differentiator have a good result for all wave form as in Figure~\ref{fig:differentiatorWave}. We see that for square wave the result is very interesting. The shape we achieve is since the derivative of a square wave with amplitude $A$ is a delta function. The area below the this delta fucntion is proportional to the amplitude of square wave. However, for the opamp, the output voltage cannot go higher than $V-\text{CC}$, which is much less than the height of a delta fucntion. Nevertheless, it have to output the whole delta fucntion, that is to say, the area below the output have to be same as the derivative delta. Thus we see this have square shape in the output.
+    \subsection{Slew Rate}
+        For the first method, we find $\max\left(\frac{\de V}{\de t}\right) = A \omega$. This give us $450\text{kHz}\times 2 \pi \times 5 V \approx$ 14,000,000 V/s
+
+        For the ohter method, we can jsut calculate the slope as $10\text{V} / 0.8\mu\text{s} \approx$  12,500,000 V/s
 
 \section{Conclusion}
+    The result of this lab is good. Follower, inverting and non-inverting amplifier, integrator, and differentiator work as we expect. We can use a large ratio on the T network to improve integrator to slow the shift.
 
 
 
