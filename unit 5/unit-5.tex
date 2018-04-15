@@ -194,8 +194,109 @@ where $A_0$ is a very large number. Usually it is higher than $10^5$. The impeda
             \item There is a small delay to the output. When input voltage change suddenly, the output voltage will learly increase and reach the theoretical value. This is called slew rate.
         \end{enumerate}
 \section{Data and Calculation}
+    \subsection{Follower}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=1in]{image/follower/Amp-Follower-Lab.pdf}
+            \caption{An follower with changeable DC input}
+            \label{fig:followerLab}
+        \end{figure}{}
 
+        \begin{figure}[t]
+            \centering
+            \subcaptionbox{1kHz}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/follower/1kHz.pdf}}\ 
+            \subcaptionbox{100kHz}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/follower/100kHz.pdf}}\ 
+            \caption{The input and the ouput voltage for the follower in different frequency}
+        \end{figure}
+        In this part we build a follower as in Figure~\ref{fig:followerLab}. The resistor is actualy changeable so that we can achieve different voltage. By let the ratio of two resistor is up to 1:2, we can change our input DC voltage from -5V to 5V. The data obtained is in appendix, where the frequency is record as "DC". We can also remove the voltage divider and directly use a input from signal generator so as in Figure~\ref{fig:follower}, the data obtained also presented in the appendix.
 
+        On the other hand, to see that the impedance of the circuit is ideal, we can link a 1.12(1)k$\Omega$ load resistor in the output end of the Figure~\ref{fig:followerLab}. The value of the resistor for this part is shown in the Figure~\ref{fig:followerLab}: $R_1 = 9.67(1)$k$\Omega$, and $R_2 = 19.72$k$\Omega$. When we use this circuit, wee find the input voltage is 15.2(2)V with a 10.6(2)V output. However, when we remove the follower, we have a 1.42(2)V output.
+    \subsection{Amplifier}
+        \begin{figure}[h]
+            \centering
+            \subcaptionbox{Non-inverting}[.45\linewidth][c]{%
+                \includegraphics[width=.4\linewidth]{image/amp/Non-inverting-Amp-Lab.pdf}}\ 
+            \subcaptionbox{Inverting}[.45\linewidth][c]{%
+                \includegraphics[width=.4\linewidth]{image/amp/Inverting-Amp-Lab.pdf}}
+            \subcaptionbox{The output of inverting Amplifier at 1kHz}[\linewidth][c]{%
+                \includegraphics[width=0.7\linewidth]{image/amp/inv.pdf}}
+            \caption{The amplifier circuit used in lab and its output}
+            \label{fig:amplifierLab}
+        \end{figure}
+        In the lab we use a 10k$\Omega$ potentiometer to achieve the amplifier with different gain. In here we want to achieve the highest gain is 26dB, i.e., the gain is around 20. Following the Equation~\ref{eq:invertingAmplifier} and Equation~\ref{eq:nonInvertingAmplifier}, we want the ratio of the resistor is up to 1:19 for the non-inverting amplifier and is up to 1:20 for the inverting amplifier. THe circuit used in the lab is presented in the Figure~\ref{fig:amplifierLab}.
+
+        In the lab, we measure the 3 different set of data for different gain for each amplifier. The data obtained is in the appendix.
+    \subsection{Integrator}
+        \begin{figure}[h]
+            \centering
+            \subcaptionbox{Without T network}[.45\linewidth][c]{%
+                \includegraphics[width=.4\linewidth]{image/integrator/Integrator-Lab.pdf}}\ 
+            \subcaptionbox{With T network}[.45\linewidth][c]{%
+                \includegraphics[width=.4\linewidth]{image/integrator/T-network.pdf}}\ 
+            \caption{Integrator used in lab}
+            \label{fig:integratorLab}
+        \end{figure}
+
+        \begin{figure}[b]
+            \centering
+            \subcaptionbox{Sine wave}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/integrator/sine.pdf}}
+            \subcaptionbox{Triangle wave}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/integrator/tri.pdf}}
+            \subcaptionbox{Square wave}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/integrator/sqr.pdf}}
+            \subcaptionbox{Square wave on high frequency}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/integrator/highFre.pdf}}
+            \caption{Result of different wave form for integrator}
+            \label{fig:integratorWave}
+        \end{figure}
+        We have used two integrator shown in Figure~\ref{fig:integratorLab}. One is with T network and the other one does not use T network. We chose a 0.1$\mu$F capacitor and a 100k$\Omega$ resistor for the both case.
+
+        For the one without T network, when we connect the input to the ground, we see a upgoing line. On the other hand, we can connect the signal generator to the input. The output voltage shift up and down for different wave form. When frequency increase, the output peak to peak voltage drop significantly. We observed that the output voltage droped below 1V at 100Hz and unrecognizable for the higher frequency.
+
+        For the one with T network, we observed the same shift but the shift is slower. When frequency increase, the output drop below to 1V at 300Hz, and unrecognizable for the higher frequency.
+
+        For both case, when input voltage have a large amplitude, the output usually be cut off on the $\pm$15V.
+    \subsection{Differentiator}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=1in]{image/differentiator/Differentiator-Lab.pdf}
+            \caption{Differentiator used in lab}
+            \label{fig:differentiatorLab}
+        \end{figure}{}
+
+        \begin{figure}[b]
+            \centering
+            \subcaptionbox{Sine wave}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/differentiator/sine.pdf}}
+            \subcaptionbox{Triangle wave}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/differentiator/tri.pdf}}
+            \subcaptionbox{Square wave}[\linewidth][c]{%
+                \includegraphics[width=.8\linewidth]{image/differentiator/sqr.pdf}}
+            \caption{Result of different wave form for differentiator}
+            \label{fig:differentiatorWave}
+        \end{figure}
+        In the lab we use a Differentiator as in Figure~\ref{fig:differentiatorLab}. We chose a 0.1$\mu$F capacitor and a 100k$\Omega$ resistor. We use a 5V amplitude on the input for all the wave fomr.
+
+    \subsection{Slew Rate}
+        To measure the slew rate, there are two different way.
+        \begin{figure}[h]
+            \centering
+            \subcaptionbox{Disform of sine wave}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/rate/wave.pdf}}
+            \subcaptionbox{Sudden voltage change}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/rate/slope.pdf}}
+            \caption{Measure the slew rate}
+            \label{fig:slewRate}
+        \end{figure}
+        \subsubsection{Disform of sine wave}
+            To measure the slew rate, we notice the change for a sinewave is hugh near the point $V(t) = 0$. At a high frequency, the voltage chagne is too quick such that the opamp cannot follow, which cause a disform of sine wave in the output. This can help us to find the slew rate.
+
+            In this part, we use a follower as Figure~\ref{fig:follower}. We use a sine wave as input and find out when the disform happen. We see the peak of the sine wave is start to disform at a frequency of 450kHz and 5V amplitude, as in Figure~\ref{fig:slewRate}a.
+        \subsubsection{Sudden voltage change}
+            A sudden voltage change can also give us a chance to observed the slew rate. In the lab, we use a follower as in Figure~\ref{fig:follower}. We apply a square wave in the input and find hot how the output delay when the voltage jump from $-V_0$ to $V_0$. THe result obtained is in Figure~\ref{fig:slewRate}b. We see that the voltage change is 10V and the time it takes is 0.8(1)$\mu$s.
 \section{Analysis}
 
 \section{Conclusion}
