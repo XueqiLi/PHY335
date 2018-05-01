@@ -152,17 +152,108 @@
             \]
 
             For example, if one wants to have a 40kHz frequency clock with a 80\% duty cycle, by above equation, one can use a 2.164k$\Omega$ and 7.213k$\Omega$ resistors and a 1nF capastor, as the value shown in Figure~\ref{fig:clocks}b.
-        \subsection{Clock Edge}
-            Another example of using flip-flop is D Clock Edge. The D flip-flop accepts a clock inputs.
-
-    
+        \subsubsection{Clock Edge}
+            \begin{figure}[h]
+                \centering
+                \includegraphics[height=1in]{image/Clock-Edge.pdf}
+                \caption{Clock Edge}
+                \label{fig:clockEdge}
+            \end{figure}
+            Another example of using D flip-flop is Clock Edge, as in Figur~\ref{fig:clockEdge}. The effect of it is simple. When clock is reasing from low to high, the output $Q$ is same as the input $D$, otherwise it holds. Thus we see that if we connect $\bar Q$ to $D$, than the output $Q$ will give a clock with double the period.
+        \subsubsection{Debounce}
+            \begin{figure}[h]
+                \centering
+                \includegraphics[height=1.3in]{image/Debouncer.pdf}
+                \caption{A Debouncer Example}
+                \label{fig:debouncer}
+            \end{figure}
+            Another nice application is a debouncer, as presented in Figur~\ref{fig:debouncer}. This use the hold function so that the output not mistakenly change the output for counter.
 \section{Data and Calculation}
+    \subsection{Clocks}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=2in]{image/clock-lab.pdf}
+            \caption{Result for clock}
+            \label{fig:clockResult}
+        \end{figure}
+        In the lab, we wish to obtain a frequency of 40 kHz and a duty cycle of 80\%. By using Equation~\ref{fig:clocks}, we find $R_1 = 21640\Omega$ and $R_2 = 7213\Omega$ if we want to use a 1nF capastor. In lab, we use a 20.73(2)k$\Omega$ and 7.19(1)k$\Omega$ resistor and a 1.00(1)nF capastor, as shown in Figure~\ref{fig:clocks}.
+    \subsection{Signal Generator}
+        The signal generator on TTL mode can only give square wave. This wave does not change on high frequency.
 
+    \subsection{XOR gate}
+        We want to build a XOR gate using NAND gate, as in Figure~\ref{fig:nandToXor}. The result is same as the truth table of XOR gate.
+
+    \subsection{Two Bit Half-adder}
+        Following Figure~\ref{fig:twoBitHalfAdder}, we obtained a two bit half-adder. The result is same as the truth table of a two bit half-adder.
+
+    \subsection{Threshold Test}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=2in]{image/Threshold-Test.pdf}
+            \caption{circuit for Threshold Test}
+            \label{fig:thresholdTest}
+        \end{figure}
+        \begin{table}[h]
+        \centering
+        \begin{tabular}{c c p{0.5in}<{\centering} p{0.5in}<{\centering}} 
+        D {[}V{]} & Error on D {[}V{]} & $Q$ & $\bar Q$ \\ \hline\hline
+        5.00      & 0.02               & 1 & 0        \\ \hline
+        4.95      & 0.02               & 1 & 0        \\ \hline
+        4.92      & 0.02               & 1 & 0        \\ \hline
+        4.90      & 0.02               & 1 & 0        \\ \hline
+        1.7       & 0.02               & 1 & 0        \\ \hline
+        1.43      & 0.02               & 1 & 0        \\ \hline
+        1.47      & 0.02               & 0 & 1        \\ \hline
+        \end{tabular}
+        \caption{Result of threshold test}
+        \label{tb:threshold}
+        \end{table}
+        We using the circuit as in Figure~\ref{fig:thresholdTest}. By changing the input voltage, we obtained a result as in Table~\ref{tb:threshold}.
+    \subsection{Clock Edge}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=2in]{image/clock-edge-lab.pdf}
+            \caption{Result of clock edge}
+            \label{fig:clockEdgeLab}
+        \end{figure}
+        Using a circuit as in Figure~\ref{fig:clockEdge}, we obtained a result as in Figure~\ref{fig:clockEdgeLab}.
+    \subsection{Propagation Delay}
+        \begin{figure}[h]
+            \centering
+            \subcaptionbox{Delay for a D flip-flop}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/delay1.pdf}}
+            \subcaptionbox{Delay for a 7404 chip}[.49\linewidth][c]{%
+                \includegraphics[width=.49\linewidth]{image/delay2.pdf}}
+            \caption{Measure Propagatio{}n Dela}
+            \label{fig:delay}
+        \end{figure}
+        Using the clock edge circuit, one can measure the propagation delay of the flip-flop chip. A result is obtained in Figure~\ref{fig:delay}. On the other hand, as a comparison, we also measure a delay of a 7404 chip. We see that the delay of a D flip-flop chip is 15(2)ns. On the other hand, the delay of a 7494 chip is 50(5)ns, which means each component is 8(5)ns.
+    \subsection{Debouncer}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=2in]{image/debouncer-lab.pdf}
+            \caption{Result of debouncer}
+            \label{fig:debouncerLab}
+        \end{figure}
+        Following Figure~\ref{fig:debouncer}, we can obtained a debouncer. The result of the debouncer is shown as in Figur~\ref{fig:debouncerLab}. We see that the voltage use 60(10)ns from low to high. Indeed, in the lab we see that the output shows the same behavior. By connect the debouncer to a 74393 chip, we obtained a counter of switch press.
 \section{Analysis}
-
+    \subsection{Clock}
+        From the result we see that we achieve a 35.3(2)kHz clock, it is within a 15\% range of a 40kHz clock. We see that it is a 79(1)\% duty cycle. This result is good.
+    \subsection{Signal Generator}
+        From the lab we see that signal generator can give a square wave in TTL mode. The wave is independent from the frequency.
+    \subsection{XOR Gate}
+        In the lab, we successfully achieve a XOR gate by using NAND gate.
+    \subsection{Two bit half-adder}
+        In the lab, we successfully achieve a two bit half-adder.
+    \subsection{Threshold Test}
+        From the Table~\ref{tb:threshold}, we see that the output of $Q$ and $\bar Q$ changed at 1.45(2)V. This agree with the TTL standard.
+    \subsection{Clock Edge}
+        From Figure~\ref{fig:clockEdgeLab}, we see that the output change in the rising edge. We see that the propagation delay of clock edge is lower than the 7404 chip.
+    \subsection{Debounce}
+        A debouncer have indeed been achieved in the lab. With counter, the circuit behavior properly.
 
 \section{Conclusion}
-
+    The result of this lab is good. One can use a more precise resistor as calculation to achieve a better result on the clock.
 
 
 

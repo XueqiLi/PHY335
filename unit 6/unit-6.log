@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 APR 2018 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 APR 2018 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -730,11 +730,12 @@ Package pdftex.def Info: image/Flip-flop.pdf used on input line 124.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<image/555-Chip.pdf, id=29, 309.1055pt x 253.6047pt>
+<image/555-Chip.pdf, id=29, 496.64452pt x 407.53426pt>
 File: image/555-Chip.pdf Graphic file (type pdf)
- <use image/555-Chip.pdf>
+
+<use image/555-Chip.pdf>
 Package pdftex.def Info: image/555-Chip.pdf used on input line 133.
-(pdftex.def)             Requested size: 135.30075pt x 111.00981pt.
+(pdftex.def)             Requested size: 135.30075pt x 111.02444pt.
 
 Overfull \hbox (14.7594pt too wide) in paragraph at lines 133--133
  [][] 
@@ -746,34 +747,108 @@ File: image/Clocks.pdf Graphic file (type pdf)
 Package pdftex.def Info: image/Clocks.pdf used on input line 135.
 (pdftex.def)             Requested size: 108.2406pt x 100.58319pt.
 
-[2 <./image/Full-Adder.pdf> <./image/Two-Bit-Half-adder.pdf> <./image/Flip-flop
-.pdf> <./image/555-Chip.pdf> <./image/Clocks.pdf>] (./unit-6.bbl) [3]
-(./unit-6.aux) ) 
+<image/Clock-Edge.pdf, id=31, 100.30632pt x 55.12733pt>
+File: image/Clock-Edge.pdf Graphic file (type pdf)
+
+<use image/Clock-Edge.pdf>
+Package pdftex.def Info: image/Clock-Edge.pdf used on input line 158.
+(pdftex.def)             Requested size: 131.50323pt x 72.26999pt.
+ [2 <./image/Full-Adder.pdf> <./image/Two-Bit-Half-adder.pdf> <./image/Flip-flo
+p.pdf> <./image/555-Chip.pdf> <./image/Clocks.pdf>]
+<image/Debouncer.pdf, id=124, 139.98543pt x 122.05548pt>
+File: image/Debouncer.pdf Graphic file (type pdf)
+
+<use image/Debouncer.pdf>
+Package pdftex.def Info: image/Debouncer.pdf used on input line 166.
+(pdftex.def)             Requested size: 107.75279pt x 93.95122pt.
+
+<image/clock-lab.pdf, id=125, 792.90889pt x 597.23125pt>
+File: image/clock-lab.pdf Graphic file (type pdf)
+
+<use image/clock-lab.pdf>
+Package pdftex.def Info: image/clock-lab.pdf used on input line 175.
+(pdftex.def)             Requested size: 191.89906pt x 144.54pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<image/Threshold-Test.pdf, id=126, 113.45601pt x 102.53003pt>
+File: image/Threshold-Test.pdf Graphic file (type pdf)
+
+<use image/Threshold-Test.pdf>
+Package pdftex.def Info: image/Threshold-Test.pdf used on input line 192.
+(pdftex.def)             Requested size: 159.96431pt x 144.54pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<image/clock-edge-lab.pdf, id=127, 796.51398pt x 597.23125pt>
+File: image/clock-edge-lab.pdf Graphic file (type pdf)
+
+<use image/clock-edge-lab.pdf>
+Package pdftex.def Info: image/clock-edge-lab.pdf used on input line 215.
+(pdftex.def)             Requested size: 192.77156pt x 144.54pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<image/delay1.pdf, id=128, 793.80304pt x 597.23125pt>
+File: image/delay1.pdf Graphic file (type pdf)
+ <use image/delay1.pdf>
+Package pdftex.def Info: image/delay1.pdf used on input line 224.
+(pdftex.def)             Requested size: 120.54135pt x 90.68349pt.
+
+<image/delay2.pdf, id=129, 792.27806pt x 597.23125pt>
+File: image/delay2.pdf Graphic file (type pdf)
+ <use image/delay2.pdf>
+Package pdftex.def Info: image/delay2.pdf used on input line 226.
+(pdftex.def)             Requested size: 120.54135pt x 90.86575pt.
+
+[3 <./image/Clock-Edge.pdf> <./image/Debouncer.pdf> <./image/clock-lab.pdf> <./
+image/Threshold-Test.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 230.
+
+<image/debouncer-lab.pdf, id=219, 797.57697pt x 597.23125pt>
+File: image/debouncer-lab.pdf Graphic file (type pdf)
+
+<use image/debouncer-lab.pdf>
+Package pdftex.def Info: image/debouncer-lab.pdf used on input line 234.
+(pdftex.def)             Requested size: 193.02882pt x 144.54pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./image/clock-edge-lab.pdf> <./image/delay1.pdf> <./image/delay2.pdf> <./im
+age/debouncer-lab.pdf>] (./unit-6.bbl) [5] (./unit-6.aux) ) 
 Here is how much of TeX's memory you used:
- 15549 strings out of 492995
- 300080 string characters out of 6132704
- 340030 words of memory out of 5000000
- 18951 multiletter control sequences out of 15000+600000
+ 15598 strings out of 492995
+ 301126 string characters out of 6132704
+ 340146 words of memory out of 5000000
+ 18992 multiletter control sequences out of 15000+600000
  12474 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,46p,10378b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on unit-6.pdf (3 pages, 210017 bytes).
+ 42i,11n,46p,10378b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti9.pfb>
+Output written on unit-6.pdf (5 pages, 2924887 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 289 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
