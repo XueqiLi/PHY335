@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 MAY 2018 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 MAY 2018 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -695,35 +695,120 @@ LaTeX Font Info:    Try loading font information for U+esvect on input line 27.
 File: uesvect.fd 
 )
 \c__siunitx_mathtt_int=\count196
- (./unit-7.bbl) [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pd
-ftex.map}]
-(./unit-7.aux) ) 
+
+<image/DAC.pdf, id=1, 420.95871pt x 287.70656pt>
+File: image/DAC.pdf Graphic file (type pdf)
+ <use image/DAC.pdf>
+Package pdftex.def Info: image/DAC.pdf used on input line 88.
+(pdftex.def)             Requested size: 249.9028pt x 170.799pt.
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 88--89
+ [][] 
+ []
+
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ima
+ge/DAC.pdf>] <image/plot.pdf, id=45, 457.71pt x 249.93375pt>
+File: image/plot.pdf Graphic file (type pdf)
+
+<use image/plot.pdf>
+Package pdftex.def Info: image/plot.pdf used on input line 125.
+(pdftex.def)             Requested size: 249.9028pt x 136.46098pt.
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 125--126
+ [][] 
+ []
+
+<image/DAC-ADC.pdf, id=46, 389.98753pt x 543.80202pt>
+File: image/DAC-ADC.pdf Graphic file (type pdf)
+ <use image/DAC-ADC.pdf>
+Package pdftex.def Info: image/DAC-ADC.pdf used on input line 135.
+(pdftex.def)             Requested size: 249.9028pt x 348.46358pt.
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 135--136
+ [][] 
+ []
+
+<image/plot2.pdf, id=47, 465.74pt x 258.9675pt>
+File: image/plot2.pdf Graphic file (type pdf)
+ <use image/plot2.pdf>
+Package pdftex.def Info: image/plot2.pdf used on input line 143.
+(pdftex.def)             Requested size: 249.9028pt x 138.95522pt.
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<image/ADC-DAC.pdf, id=48, 336.55693pt x 478.1971pt>
+File: image/ADC-DAC.pdf Graphic file (type pdf)
+ <use image/ADC-DAC.pdf>
+Package pdftex.def Info: image/ADC-DAC.pdf used on input line 151.
+(pdftex.def)             Requested size: 249.9028pt x 355.07886pt.
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 151--152
+ [][] 
+ []
+
+<image/sine1.pdf, id=49, 795.70682pt x 597.23125pt>
+File: image/sine1.pdf Graphic file (type pdf)
+ <use image/sine1.pdf>
+Package pdftex.def Info: image/sine1.pdf used on input line 159.
+(pdftex.def)             Requested size: 120.54135pt x 90.47389pt.
+
+<image/sine2.pdf, id=50, 788.34528pt x 597.23125pt>
+File: image/sine2.pdf Graphic file (type pdf)
+ <use image/sine2.pdf>
+Package pdftex.def Info: image/sine2.pdf used on input line 161.
+(pdftex.def)             Requested size: 120.54135pt x 91.31229pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./image/plot.pdf> <./image/DAC-ADC.pdf> <./image/plot2.pdf
+
+pdfTeX warning: pdflatex (file ./image/plot2.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 169.
+
+(./unit-7.bbl) [3 <./image/ADC-DAC.pdf> <./image/sine1.pdf> <./image/sine2.pdf>
+] (./unit-7.aux) ) 
 Here is how much of TeX's memory you used:
- 15500 strings out of 492995
- 299115 string characters out of 6132704
- 359988 words of memory out of 5000000
- 18909 multiletter control sequences out of 15000+600000
- 12474 words of font info for 53 fonts, out of 8000000 for 9000
+ 15574 strings out of 492995
+ 300216 string characters out of 6132704
+ 341086 words of memory out of 5000000
+ 18970 multiletter control sequences out of 15000+600000
+ 14570 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,40p,10378b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+ 42i,11n,46p,10378b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on unit-7.pdf (1 page, 137131 bytes).
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on unit-7.pdf (3 pages, 1926388 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 194 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
