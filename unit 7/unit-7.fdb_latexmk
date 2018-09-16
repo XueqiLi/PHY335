@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex unit-7"] 1525643073 "unit-7.aux" "unit-7.bbl" "unit-7" 1525643091
+["bibtex unit-7"] 1525643073 "unit-7.aux" "unit-7.bbl" "unit-7" 1528802446
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst" 1480098436 71518 fec93f06df0c073f83d2330456bd19c2 ""
   "cite.bib" 1523776925 363 3349b4b272f1907cb32cecd3cf942233 ""
   "unit-7.aux" 1525643074 2475 9eccb34c2b72988a1705bdcd11e0abcf ""
   "unit-7Notes.bib" 1525643074 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "unit-7.bbl"
   "unit-7.blg"
-["pdflatex"] 1525643073 "unit-7.tex" "unit-7.pdf" "unit-7" 1525643091
+  "unit-7.bbl"
+["pdflatex"] 1525643073 "unit-7.tex" "unit-7.pdf" "unit-7" 1528802446
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -133,9 +133,9 @@
   "image/sine2.pdf" 1525198421 768567 003afc6d54a76045525647140383937e ""
   "unit-7.aux" 1525643074 2475 9eccb34c2b72988a1705bdcd11e0abcf ""
   "unit-7.bbl" 1525643073 1984 b68c31deb1db589a77cf4936360c75bb "bibtex unit-7"
-  "unit-7.tex" 1525643090 10465 6efe4218825c85ff1b83f3b8f408df18 ""
+  "unit-7.tex" 1528802444 10465 6efe4218825c85ff1b83f3b8f408df18 ""
   (generated)
-  "unit-7.log"
   "unit-7.pdf"
-  "unit-7Notes.bib"
+  "unit-7.log"
   "unit-7.aux"
+  "unit-7Notes.bib"
